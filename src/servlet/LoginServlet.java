@@ -14,7 +14,7 @@ public class LoginServlet extends HttpServlet {
 		String name = request.getParameter("name");
 		String password = request.getParameter("password");
 		String info = request.getParameter("macAddr");
-		
+		System.out.println(info);
 	
 		if(name.equals("root")&&password.equals("tvws")){
 			request.getSession().setAttribute("userName", name);
