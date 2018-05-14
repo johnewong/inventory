@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+ 
+    <servlet>
+        <servlet-name>ProductListServlet</servlet-name>
+        <servlet-class>servlet.ProductListServlet</servlet-class>
+    </servlet>
+ 
+    <servlet-mapping>
+        <servlet-name>ProductListServlet</servlet-name>
+        <url-pattern>/productList</url-pattern>
+    </servlet-mapping>
+ 
+    <servlet>
+        <servlet-name>HelloServlet</servlet-name>
+        <servlet-class>servlet.HelloServlet</servlet-class>
+    </servlet>
+ 
+    <servlet-mapping>
+        <servlet-name>HelloServlet</servlet-name>
+        <url-pattern>/hello</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>servlet.LoginServlet</servlet-class>
+    </servlet>
+ 
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/login</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ProductAddServlet</servlet-name>
+        <servlet-class>servlet.ProductAddServlet</servlet-class>
+    </servlet>
+ 
+    <servlet-mapping>
+        <servlet-name>ProductAddServlet</servlet-name>
+        <url-pattern>/productAdd</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ProductGetServlet</servlet-name>
+        <servlet-class>servlet.ProductGetServlet</servlet-class>
+    </servlet>
+ 
+    <servlet-mapping>
+        <servlet-name>ProductGetServlet</servlet-name>
+        <url-pattern>/productGet</url-pattern>
+    </servlet-mapping>
+ 
+    <servlet>
+        <servlet-name>ProductDeleteServlet</servlet-name>
+        <servlet-class>servlet.ProductDeleteServlet</servlet-class>
+    </servlet>
+ 
+    <servlet-mapping>
+        <servlet-name>ProductDeleteServlet</servlet-name>
+        <url-pattern>/productDelete</url-pattern>
+    </servlet-mapping>
+
+     <servlet>
+        <servlet-name>ProductEditServlet</servlet-name>
+        <servlet-class>servlet.ProductEditServlet</servlet-class>
+    </servlet>
+ 
+    <servlet-mapping>
+        <servlet-name>ProductEditServlet</servlet-name>
+        <url-pattern>/productEdit</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CustomerListServlet</servlet-name>
+        <servlet-class>servlet.CustomerListServlet</servlet-class>
+    </servlet>
+ 
+    <servlet-mapping>
+        <servlet-name>CustomerListServlet</servlet-name>
+        <url-pattern>/customerList</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CustomerDeleteServlet</servlet-name>
+        <servlet-class>servlet.CustomerDeleteServlet</servlet-class>
+    </servlet>
+ 
+    <servlet-mapping>
+        <servlet-name>CustomerDeleteServlet</servlet-name>
+        <url-pattern>/customerDelete</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>CustomerGetServlet</servlet-name>
+        <servlet-class>servlet.CustomerGetServlet</servlet-class>
+    </servlet>
+ 
+    <servlet-mapping>
+        <servlet-name>CustomerGetServlet</servlet-name>
+        <url-pattern>/customerGet</url-pattern>
+    </servlet-mapping>
+	
+    <servlet>
+        <servlet-name>CustomerAddServlet</servlet-name>
+        <servlet-class>servlet.CustomerAddServlet</servlet-class>
+    </servlet>
+ 
+    <servlet-mapping>
+        <servlet-name>CustomerAddServlet</servlet-name>
+        <url-pattern>/customerAdd</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CustomerEditServlet</servlet-name>
+        <servlet-class>servlet.CustomerEditServlet</servlet-class>
+    </servlet>
+ 
+    <servlet-mapping>
+        <servlet-name>CustomerEditServlet</servlet-name>
+        <url-pattern>/customerEdit</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ProductScanServlet</servlet-name>
+        <servlet-class>servlet.ProductScanServlet</servlet-class>
+    </servlet>
+ 
+    <servlet-mapping>
+        <servlet-name>ProductScanServlet</servlet-name>
+        <url-pattern>/productScan</url-pattern>
+    </servlet-mapping>
+</web-app>
