@@ -1,6 +1,6 @@
 # inventory
 
-This is the inventory project for Whizpace
+This is the inventory project
 
 1. Please download JDK and Tomcat in your computer.
 2. Please configure Tomcat config file in ..\tomcat\conf\server.xml
