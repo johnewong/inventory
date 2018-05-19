@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import inventory.ProductDAO;
 import inventory.Product;
+import inventory.PasswordGenerator;
 
 public class ProductEditServlet extends HttpServlet{
 	
@@ -22,18 +23,22 @@ public class ProductEditServlet extends HttpServlet{
 		String MACaddr = request.getParameter("MACaddr");
 		String status = request.getParameter("status");
 		String soldDate = request.getParameter("soldDate");
-		int cid = Integer.parseInt(request.getParameter("cid"));
-		String password = request.getParameter("password");
+		int cid = 0;
+		cid = Integer.parseInt(request.getParameter("cid"));
+		String password = null;
+		if(status.equals("sold")) {//password generator
+			PasswordGenerator pg = new PasswordGenerator();
+			password = pg.PasswordGenerator(MACaddr);
+		}	else {
+			password = request.getParameter("password");
+		}
 		String comment = request.getParameter("comment");
-		System.out.println(id+productName);
-		
 		Product product = new Product();
 		product.setId(id);
 		product.setProductName(productName);
 		product.setType(type);
 		product.setMACAddr(MACaddr);
 		product.setStatus(status);
-		//product.setSoldDate(soldDate);
 		product.setCid(cid);
 		product.setPassword(password);
 		product.setComment(comment);
@@ -41,9 +46,6 @@ public class ProductEditServlet extends HttpServlet{
 			product.setSoldDate(soldDate);
 		 else
 			product.setSoldDate("");
-		
-		
-		
 		new ProductDAO().update(product);		
 		response.sendRedirect("productList");
 	}

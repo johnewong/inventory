@@ -14,21 +14,30 @@ public class LoginServlet extends HttpServlet {
 		String name = request.getParameter("name");
 		String password = request.getParameter("password");
 		String info = request.getParameter("macAddr");
+		String ipaddr = request.getRemoteAddr();
+
 		System.out.println(info);
-		System.out.println(name);
-		System.out.println(password);
+		System.out.println(ipaddr);
 	
+		/*if(ipaddr.equals("192.168.186.25")){
+			request.getSession().setAttribute("userName", name);
+			//request.setAttribute("macAddr",info);
+			//System.out.println(info);
+			response.sendRedirect("productList");
+			
+		}*/
 		if(name.equals("root")&&password.equals("tvws")){
 			request.getSession().setAttribute("userName", name);
 			//request.setAttribute("macAddr",info);
 			//System.out.println(info);
-			response.sendRedirect("productScan");
+			response.sendRedirect("productList");
 			
 		}
 		
 		else if(!info.isEmpty()&&name.equals("root")&&password.equals("tvws")) {
 			request.getSession().setAttribute("userName", name);
-			response.sendRedirect("productList");
+			request.setAttribute("macAddr",info);
+			response.sendRedirect("productScan");		
 		}else {
 			System.out.println("Password or Username wrong");
 			response.sendRedirect("login.html");
