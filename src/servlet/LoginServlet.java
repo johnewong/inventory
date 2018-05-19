@@ -13,34 +13,25 @@ public class LoginServlet extends HttpServlet {
 		
 		String name = request.getParameter("name");
 		String password = request.getParameter("password");
-		String info = request.getParameter("macAddr");
+		String info = request.getParameter("info");
 		String ipaddr = request.getRemoteAddr();
 
-		System.out.println(info);
+		System.out.println("LoginServletInfo:" + info);
 		System.out.println(ipaddr);
 	
-		/*if(ipaddr.equals("192.168.186.25")){
+		if(info.isEmpty()&&name.equals("root")&&password.equals("tvws")){ //Direct to productList
 			request.getSession().setAttribute("userName", name);
-			//request.setAttribute("macAddr",info);
-			//System.out.println(info);
-			response.sendRedirect("productList");
-			
-		}*/
-		if(name.equals("root")&&password.equals("tvws")){
-			request.getSession().setAttribute("userName", name);
-			//request.setAttribute("macAddr",info);
-			//System.out.println(info);
 			response.sendRedirect("productList");
 			
 		}
 		
-		else if(!info.isEmpty()&&name.equals("root")&&password.equals("tvws")) {
+		else if(!info.isEmpty()&&name.equals("root")&&password.equals("tvws")) { //To productScan
 			request.getSession().setAttribute("userName", name);
-			request.setAttribute("macAddr",info);
-			response.sendRedirect("productScan");		
+			request.setAttribute("info",info);
+			request.getRequestDispatcher("productScan").forward(request, response);		
 		}else {
 			System.out.println("Password or Username wrong");
-			response.sendRedirect("login.html");
+			response.sendRedirect("login.jsp");
 		}
 		
 	}

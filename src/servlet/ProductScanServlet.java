@@ -21,13 +21,11 @@ public class ProductScanServlet extends HttpServlet{
 		String macAddr = request.getParameter("macAddr");
 		String userName = (String) request.getSession().getAttribute("userName");
         if (null == userName) {
-        	//request.getRequestDispatcher("login").forward(request, response);
-            response.sendRedirect("login.html");
-           
+        	request.setAttribute("info", macAddr);
+        	request.getRequestDispatcher("login.jsp").forward(request, response);
             return;
         }
-		
-		//String macAddr = request.getParameter("macAddr");
+        macAddr = request.getParameter("info");
 		Product product = new ProductDAO().scan(macAddr);
 		List<Customer> customers = new CustomerDAO().list();
 		
