@@ -13,6 +13,7 @@
 		<td>Email</td>
 		<td>Quantity</td>
 		<td>Status</td>
+		<td>Total</td>
 		<td>Edit</td>
 		<td>Delete</td>
 	</tr>
@@ -26,6 +27,7 @@
 		<td>${customer.email}</td>
 		<td>${customer.quantity}</td>
 		<td>${customer.status}</td>
+		<td>${customer.total}</td>
 		<td><a href="customerGet?id=${customer.id}">edit</a></td>
         <td><a href="customerDelete?id=${customer.id}" onclick="return confirm('Are you sure you want to delete this item?');">delete</a></td> 		
 		</tr>
@@ -42,7 +44,7 @@
 
 <form method="post" action="customerList">
 	<select name="search">
-		<option value="" selected>null</option>
+		<option value="" selected>Search Element</option>
 		<option value="companyName">Company</option>
 		<option value="contactName">ContactName</option>
 		<option value="status">Status</option>

@@ -44,6 +44,7 @@ public class ProductDAO {
 			ps.setString(5, product.getStatus());
 			ps.setString(6, product.getPassword());
 			ps.setString(7, product.getComment());
+			//ps.setInt(8, product.getPrice());
 			ps.execute();
 			ResultSet rs = ps.getGeneratedKeys();
 			
@@ -59,7 +60,7 @@ public class ProductDAO {
 	
 	public void update(Product product) {
 		
-		String sql = "update product set productName = ?, type = ?, MACaddr = ?, status = ?, soldDate = ?, cid = ?, password = ?, comment = ? where id = ?";
+		String sql = "update product set productName = ?, type = ?, MACaddr = ?, status = ?, soldDate = ?, cid = ?, password = ?, comment = ?, price = ? where id = ?";
 		try(Connection c = getConnection(); PreparedStatement ps = c.prepareStatement(sql)) {
 			
 			ps.setString(1, product.getProductName());
@@ -71,7 +72,8 @@ public class ProductDAO {
 			ps.setInt(6, product.getCid());
 			ps.setString(7, product.getPassword());
 			ps.setString(8, product.getComment());
-			ps.setInt(9, product.getId());
+			ps.setInt(9,product.getPrice());
+			ps.setInt(10, product.getId());
 			ps.execute();
 			System.out.println(product.getSoldDate());
 			
@@ -110,6 +112,7 @@ public class ProductDAO {
 				p.setCid(cid);
 				p.setPassword(rs.getString(9));
 				p.setComment(rs.getString(10));	
+				p.setPrice(rs.getInt(11));
 				p.setCustomer(new CustomerDAO().get(cid));
 			}
 			
@@ -139,6 +142,7 @@ public class ProductDAO {
 				p.setCid(cid);
 				p.setPassword(rs.getString(9));
 				p.setComment(rs.getString(10));	
+				p.setPrice(rs.getInt(11));
 				p.setCustomer(new CustomerDAO().get(cid));
 				
 			}
@@ -177,6 +181,7 @@ public class ProductDAO {
 				company = customerDAO.get(cid);
 				String password = rs.getString(9);
 				String comment = rs.getString(10);
+				int price = rs.getInt(11);
 				p.setId(id);
 				p.setProductName(productName);
 				p.setType(type);
@@ -188,6 +193,7 @@ public class ProductDAO {
 				p.setCustomer(company);
 				p.setPassword(password);
 				p.setComment(comment);
+				p.setPrice(price);
 				productList.add(p);
 			}
 			 ps.close();
@@ -221,6 +227,7 @@ public class ProductDAO {
 				company = customerDAO.get(cid);
 				String password = rs.getString(9);
 				String comment = rs.getString(10);
+				int price = rs.getInt(11);
 				p.setId(id);
 				p.setProductName(productName);
 				p.setType(type);
@@ -232,6 +239,7 @@ public class ProductDAO {
 				p.setCustomer(company);
 				p.setPassword(password);
 				p.setComment(comment);
+				p.setPrice(price);
 				products.add(p);
 			}	
 			 ps.close();
@@ -264,6 +272,7 @@ public class ProductDAO {
 				company = customerDAO.get(cid);
 				String password = rs.getString(9);
 				String comment = rs.getString(10);
+				int price = rs.getInt(11);
 				p.setId(id);
 				p.setProductName(productName);
 				p.setType(type);
@@ -275,6 +284,7 @@ public class ProductDAO {
 				p.setCustomer(company);
 				p.setPassword(password);
 				p.setComment(comment);
+				p.setPrice(price);
 				products.add(p);
 			}	
 			 ps.close();
@@ -307,6 +317,7 @@ public class ProductDAO {
 				company = customerDAO.get(cid);
 				String password = rs.getString(9);
 				String comment = rs.getString(10);
+				int price = rs.getInt(11);
 				p.setId(id);
 				p.setProductName(productName);
 				p.setType(type);
@@ -318,6 +329,7 @@ public class ProductDAO {
 				p.setCustomer(company);
 				p.setPassword(password);
 				p.setComment(comment);
+				p.setPrice(price);
 				products.add(p);
 			}	
 			 ps.close();
@@ -328,8 +340,4 @@ public class ProductDAO {
 		return products;
 	}
 
-	public List<Product> listCustomerByContact(String key) {
-		// TODO Auto-generated method stub
-		return null;
-	}
 }

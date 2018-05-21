@@ -33,6 +33,7 @@ public class ProductEditServlet extends HttpServlet{
 			password = request.getParameter("password");
 		}
 		String comment = request.getParameter("comment");
+		int price = Integer.parseInt(request.getParameter("price"));
 		Product product = new Product();
 		product.setId(id);
 		product.setProductName(productName);
@@ -42,6 +43,7 @@ public class ProductEditServlet extends HttpServlet{
 		product.setCid(cid);
 		product.setPassword(password);
 		product.setComment(comment);
+		product.setPrice(price);
 		if(status.equals("sold")) 
 			product.setSoldDate(soldDate);
 		 else

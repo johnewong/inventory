@@ -20,7 +20,7 @@ public class ProductGetServlet extends HttpServlet{
 		
 		String userName = (String) request.getSession().getAttribute("userName");
         if (null == userName) {
-            response.sendRedirect("login.html");
+            response.sendRedirect("login.jsp");
             return;
         }
 		

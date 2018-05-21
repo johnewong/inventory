@@ -29,8 +29,8 @@ public class CustomerDAO {
 	public void add(Customer customer) {
 		
 		
-		String sql = "insert into customer (id, companyName, contactName, contactNumber, email, quantity, status)"
-				+ "values(null,?,?,?,?,?,?)";
+		String sql = "insert into customer (id, companyName, contactName, contactNumber, email, quantity, status, total)"
+				+ "values(null,?,?,?,?,?,?,?)";
 		try(Connection c = getConnection(); PreparedStatement ps = c.prepareStatement(sql)) {
 			
 			
@@ -40,6 +40,7 @@ public class CustomerDAO {
 			ps.setString(4, customer.getEmail());
 			ps.setInt(5, customer.getQuantity());
 			ps.setString(6, customer.getStatus());
+			ps.setInt(7, customer.getTotal());
 			ps.execute();
 			ResultSet rs = ps.getGeneratedKeys();
 			
@@ -56,7 +57,7 @@ public class CustomerDAO {
 	}
 	
 	public void update(Customer customer) {
-		String sql = "update customer set companyName = ?, contactName = ?, contactNumber = ?, email = ?, quantity = ?, status = ? where id = ?";
+		String sql = "update customer set companyName = ?, contactName = ?, contactNumber = ?, email = ?, quantity = ?, status = ? , total = ? where id = ?";
 		try(Connection c = getConnection(); PreparedStatement ps = c.prepareStatement(sql)) {
 			
 			ps.setString(1, customer.getCompanyName());
@@ -65,7 +66,8 @@ public class CustomerDAO {
 			ps.setString(4, customer.getEmail());
 			ps.setInt(5, customer.getQuantity());
 			ps.setString(6, customer.getStatus());
-			ps.setInt(7, customer.getId());
+			ps.setInt(7, customer.getTotal());
+			ps.setInt(8, customer.getId());
 			ps.execute();
 			
 		} catch(SQLException e) {
@@ -100,6 +102,7 @@ public class CustomerDAO {
 				c.setEmail(rs.getString(5));
 				c.setQuantity(rs.getInt(6));
 				c.setStatus(rs.getString(7));
+				c.setTotal(rs.getInt(8));
 			}	
 		} catch(SQLException e) {
 			e.printStackTrace();
@@ -145,6 +148,7 @@ public class CustomerDAO {
 				String email = rs.getString(5);
 				int quantity = rs.getInt(6);
 				String status = rs.getString(7);
+				int total = rs.getInt(8);
 				customer.setId(id);
 				customer.setCompanyName(companyName);
 				customer.setContactName(contactName);
@@ -152,6 +156,7 @@ public class CustomerDAO {
 				customer.setEmail(email);
 				customer.setQuantity(quantity);
 				customer.setStatus(status);
+				customer.setTotal(total);
 				customerList.add(customer);
 			}
 			 ps.close();
@@ -180,6 +185,7 @@ public class CustomerDAO {
 				String email = rs.getString(5);
 				int quantity = rs.getInt(6);
 				String status = rs.getString(7);
+				int total = rs.getInt(8);
 				customer.setId(id);
 				customer.setCompanyName(companyName);
 				customer.setContactName(contactName);
@@ -187,6 +193,7 @@ public class CustomerDAO {
 				customer.setEmail(email);
 				customer.setQuantity(quantity);
 				customer.setStatus(status);
+				customer.setTotal(total);
 				customerList.add(customer);
 			}
 			 s.close();
@@ -214,6 +221,7 @@ public class CustomerDAO {
 				String email = rs.getString(5);
 				int quantity = rs.getInt(6);
 				String status = rs.getString(7);
+				int total = rs.getInt(8);
 				customer.setId(id);
 				customer.setCompanyName(companyName);
 				customer.setContactName(contactName);
@@ -221,6 +229,7 @@ public class CustomerDAO {
 				customer.setEmail(email);
 				customer.setQuantity(quantity);
 				customer.setStatus(status);
+				customer.setTotal(total);
 				customerList.add(customer);
 			}
 			 s.close();
@@ -248,6 +257,7 @@ public class CustomerDAO {
 				String email = rs.getString(5);
 				int quantity = rs.getInt(6);
 				String status = rs.getString(7);
+				int total = rs.getInt(8);
 				customer.setId(id);
 				customer.setCompanyName(companyName);
 				customer.setContactName(contactName);
@@ -255,6 +265,7 @@ public class CustomerDAO {
 				customer.setEmail(email);
 				customer.setQuantity(quantity);
 				customer.setStatus(status);
+				customer.setTotal(total);
 				customerList.add(customer);
 			}
 			 s.close();

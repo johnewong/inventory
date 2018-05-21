@@ -31,7 +31,7 @@ public class CustomerAddServlet extends HttpServlet{
 		String email = request.getParameter("email");
 		int quantity = Integer.parseInt(request.getParameter("quantity"));
 		String status = request.getParameter("status");
-		
+		int total = Integer.parseInt(request.getParameter("total"));
 		
 		c.setCompanyName(companyName);
 		c.setContactName(contactName);
@@ -39,6 +39,7 @@ public class CustomerAddServlet extends HttpServlet{
 		c.setEmail(email);
 		c.setQuantity(quantity);
 		c.setStatus(status);
+		c.setTotal(total);
 		
 		new CustomerDAO().add(c); 
 		System.out.println("A new customer has been added");

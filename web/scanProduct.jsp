@@ -18,6 +18,7 @@
         <td>CompanyName</td>
         <td>Password</td>
         <td>Comment</td>
+	<td>Price</td>
     </tr>
     <tr>
     	<td>
@@ -51,6 +52,9 @@
     	<td>
     		${product.comment}
     	</td>
+	<td>
+		${product.price}
+	</td>
     </tr>
 </table>
 <button type="submit">Submit</button>

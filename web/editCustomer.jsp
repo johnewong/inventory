@@ -15,6 +15,7 @@
 				<td>Email</td>
 				<td>Quantity</td>
 				<td>Status</td>
+				<td>Total</td>
 			</tr>
 			<tr><td>${customer.id}</td>
 			<input name="id" type="text" value="${customer.id}" maxlength="6" size="6" hidden/>
@@ -32,6 +33,7 @@
 					<option value="other" ${customer.status == "other" ? 'selected == "selected"' : ''}> Other</option>					
 			</select>
 			</td>
+			<td><input type="text" name="total" value="${customer.total}" maxlength="12" size="12"</td>
 			</tr>
 			
 		</table>

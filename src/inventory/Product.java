@@ -13,6 +13,7 @@ public class Product {
 	private int cid;
 	private String password;
 	private String comment;
+	private int price;
 	private Customer customer;
 	
 	public Customer getCustomer() {
@@ -102,4 +103,14 @@ public class Product {
 	public void setComment(String comment) {
 		this.comment = comment;
 	}
+
+	public int getPrice() {
+		return price;
+	}
+
+	public void setPrice(int price) {
+		this.price = price;
+	}
+	
+	
 }

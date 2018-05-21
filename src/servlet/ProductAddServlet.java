@@ -33,6 +33,7 @@ public class ProductAddServlet extends HttpServlet {
 		//product.setCid(Integer.parseInt((request.getParameter("cid"))));
 		product.setPassword(request.getParameter("password"));
 		product.setComment(request.getParameter("comment"));
+
 		new ProductDAO().add(product);
 		request.setAttribute("userName", userName);
 		response.sendRedirect("/productList");

@@ -8,6 +8,7 @@ public class Customer {
 	private String email;
 	private int quantity;
 	private String status;
+	private int total;
 	
 	public int getId() {
 		return this.id;
@@ -63,5 +64,13 @@ public class Customer {
 	
 	public void setStatus(String status) {
 		this.status = status;
+	}
+
+	public int getTotal() {
+		return total;
+	}
+
+	public void setTotal(int total) {
+		this.total = total;
 	}
 }

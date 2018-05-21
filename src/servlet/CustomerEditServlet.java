@@ -24,6 +24,7 @@ public class CustomerEditServlet extends HttpServlet{
 		String email = request.getParameter("email");
 		int quantity = Integer.parseInt(request.getParameter("quantity"));
 		String status = request.getParameter("status");
+		int total = Integer.parseInt(request.getParameter("total"));
 		
 		c.setId(id);
 		c.setCompanyName(companyName);
@@ -32,6 +33,7 @@ public class CustomerEditServlet extends HttpServlet{
 		c.setEmail(email);
 		c.setQuantity(quantity);
 		c.setStatus(status);
+		c.setTotal(total);
 		
 		new CustomerDAO().update(c);
 		response.sendRedirect("customerList");

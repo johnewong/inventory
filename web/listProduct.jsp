@@ -13,14 +13,16 @@
         <td>MAC_Address</td>
         <td>Status</td>
         <td>SoldDate</td>
-        <td>Cid</td>
+        <!--<td>Cid</td>-->
         <td>CompanyName</td>
+        <td>Price</td>
         <td>Password</td>
         <td>Comment</td>
+        
         <td>edit</td>
         <td>delete</td>
     </tr>
-    <c:forEach items="${products}" var="product" varStatus="st">
+    <c:forEach items="${products}" var="product"  varStatus="st">
         <tr>
             <td>${product.id}</td>
             <td>${product.productName}</td>
@@ -29,10 +31,9 @@
             <td>${product.macAddr}</td>
             <td>${product.status}</td>
             <td>${product.soldDate}</td>
-            <td>${product.cid}</td>
-            <td>
-            ${product.customer.companyName}
-            </td>
+            <!--<td>${product.cid}</td>-->
+            <td>${product.customer.companyName}</td>
+            <td>${product.price}</td>
             <td>${product.password}</td>
             <td>${product.comment}</td>
             <td><a href="productGet?id=${product.id}">edit</a></td>
@@ -49,7 +50,7 @@
 
 <form method="post" action="productList">
 	<select name="search">
-		<option value="" selected>null</option>
+		<option value="" selected>Search Element</option>
 		<option value="companyName">Company</option>
 		<option value="productName">ProductName</option>
 		<option value="status">Status</option>
