@@ -16,13 +16,7 @@ public class ProductListServlet extends HttpServlet{
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-    
-		String userName = (String) request.getSession().getAttribute("userName");
-        if (null == userName) {
-            response.sendRedirect("login.jsp");
-            return;
-        }
-        
+  
         
 		if(request.getParameter("search")!=null&&request.getParameter("key")!=null) {
 			
@@ -61,7 +55,7 @@ public class ProductListServlet extends HttpServlet{
 		}
 		
 		
-        request.setAttribute("userName", userName);
+        //request.setAttribute("userName", userName);
         request.getRequestDispatcher("listProduct.jsp").forward(request, response);
     }
 }

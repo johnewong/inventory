@@ -16,12 +16,6 @@ public class ProductAddServlet extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException	{
 		
-		String userName = (String) request.getSession().getAttribute("userName");
-        if (null == userName) {
-            response.sendRedirect("login.jsp");
-            return;
-        }
-		
 		request.setCharacterEncoding("UTF-8");
 		
 		Product product = new Product();
@@ -35,7 +29,6 @@ public class ProductAddServlet extends HttpServlet {
 		product.setComment(request.getParameter("comment"));
 
 		new ProductDAO().add(product);
-		request.setAttribute("userName", userName);
 		response.sendRedirect("/productList");
 	}
 	

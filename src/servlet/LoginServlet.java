@@ -14,10 +14,10 @@ public class LoginServlet extends HttpServlet {
 		String name = request.getParameter("name");
 		String password = request.getParameter("password");
 		String info = request.getParameter("info");
-		String ipaddr = request.getRemoteAddr();
+
 
 		System.out.println("LoginServletInfo:" + info);
-		System.out.println(ipaddr);
+
 	
 		if(info.isEmpty()&&name.equals("root")&&password.equals("tvws")){ //Direct to productList
 			request.getSession().setAttribute("userName", name);

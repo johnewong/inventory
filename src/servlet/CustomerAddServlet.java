@@ -14,13 +14,7 @@ public class CustomerAddServlet extends HttpServlet{
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException	{
-		
-		String userName = (String) request.getSession().getAttribute("userName");
-        if (null == userName) {
-            response.sendRedirect("login.jsp");
-            return;
-        }
-        
+       
 		request.setCharacterEncoding("UTF-8");
 		
 		Customer c = new Customer();

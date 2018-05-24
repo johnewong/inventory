@@ -11,7 +11,6 @@ public class Item {
 	private int safetyStock;
 	private int stock;
 	private int price;
-	private int total;
 	private Date createDate;
 	
 	public void setId(int id) {
@@ -76,14 +75,6 @@ public class Item {
 
 	public void setPrice(int price) {
 		this.price = price;
-	}
-
-	public int getTotal() {
-		return total;
-	}
-
-	public void setTotal(int total) {
-		this.total = total;
 	}
 
 	public Date getCreateDate() {

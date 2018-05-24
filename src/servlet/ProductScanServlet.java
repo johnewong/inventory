@@ -18,20 +18,18 @@ public class ProductScanServlet extends HttpServlet{
 	protected void service(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException {
 		
-		String macAddr = request.getParameter("macAddr");
-		String userName = (String) request.getSession().getAttribute("userName");
-        if (null == userName) {
-        	request.setAttribute("info", macAddr);
-        	request.getRequestDispatcher("login.jsp").forward(request, response);
-            return;
-        }
+        String macAddr = null;
         macAddr = request.getParameter("info");
+        if(request.getParameter("macAddr") != null) {
+        	macAddr = request.getParameter("macAddr");
+        }
+	
+        System.out.println("Scan: "+macAddr);
 		Product product = new ProductDAO().scan(macAddr);
 		List<Customer> customers = new CustomerDAO().list();
 		
 		request.setAttribute("product", product);
 		request.setAttribute("customers", customers);
-		request.setAttribute("userName", userName);
         request.getRequestDispatcher("editProduct.jsp").forward(request, response);
 		
 	}

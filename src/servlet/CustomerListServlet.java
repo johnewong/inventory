@@ -18,12 +18,6 @@ public class CustomerListServlet extends HttpServlet{
 	protected void service(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException{
 		
-		String userName = (String) request.getSession().getAttribute("userName");
-        if (null == userName) {
-            response.sendRedirect("login.jsp");
-            return;
-        }
-		
         if(request.getParameter("search")!=null&&request.getParameter("key")!=null) {
         	String search = request.getParameter("search");
 			String key =request.getParameter("key");
@@ -53,8 +47,6 @@ public class CustomerListServlet extends HttpServlet{
     		request.setAttribute("customers", customers);
         }
  
-		
-		request.setAttribute("userName", userName);
 		request.getRequestDispatcher("listCustomer.jsp").forward(request, response);
 	}
 	

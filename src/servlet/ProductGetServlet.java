@@ -18,19 +18,12 @@ public class ProductGetServlet extends HttpServlet{
 	protected void service(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException {
 		
-		String userName = (String) request.getSession().getAttribute("userName");
-        if (null == userName) {
-            response.sendRedirect("login.jsp");
-            return;
-        }
-		
 		int id = Integer.parseInt(request.getParameter("id"));
 		Product product = new ProductDAO().get(id);
 		List<Customer> customers = new CustomerDAO().list();
 		
 		request.setAttribute("product", product);
 		request.setAttribute("customers", customers);
-		request.setAttribute("userName", userName);
         request.getRequestDispatcher("editProduct.jsp").forward(request, response);
 		
 	}

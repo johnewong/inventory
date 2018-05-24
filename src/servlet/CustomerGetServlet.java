@@ -15,17 +15,10 @@ public class CustomerGetServlet extends HttpServlet{
 	protected void service(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException {
 		
-		String userName = (String) request.getSession().getAttribute("userName");
-        if (null == userName) {
-            response.sendRedirect("login.jsp");
-            return;
-        }
-		
 		int id = Integer.parseInt(request.getParameter("id"));
 		Customer customer = new Customer();
 		customer = new CustomerDAO().get(id);
 		request.setAttribute("customer", customer);
-		request.setAttribute("userName", userName);
         request.getRequestDispatcher("editCustomer.jsp").forward(request, response);
 		
 	}
