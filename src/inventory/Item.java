@@ -3,6 +3,7 @@ package inventory;
 import java.util.Date;
 
 public class Item {
+	private int id;
 	private String name;
 	private String desc;
 	private String category;
@@ -12,6 +13,14 @@ public class Item {
 	private int price;
 	private int total;
 	private Date createDate;
+	
+	public void setId(int id) {
+		this.id = id;
+	}
+	
+	public int getId() {
+		return this.id;
+	}
 	
 	public void setName(String name) {
 		this.name = name;
