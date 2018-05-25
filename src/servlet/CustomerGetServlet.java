@@ -16,8 +16,8 @@ public class CustomerGetServlet extends HttpServlet{
 			throws ServletException, IOException {
 		
 		int id = Integer.parseInt(request.getParameter("id"));
-		Customer customer = new Customer();
-		customer = new CustomerDAO().get(id);
+		Customer customer = new CustomerDAO().get(id);
+		//customer = new CustomerDAO().get(id);
 		request.setAttribute("customer", customer);
         request.getRequestDispatcher("editCustomer.jsp").forward(request, response);
 		

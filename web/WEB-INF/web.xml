@@ -182,4 +182,24 @@
         <url-pattern>/itemDelete</url-pattern>
     </servlet-mapping>
     
+    <servlet>
+        <servlet-name>ItemGetServlet</servlet-name>
+        <servlet-class>servlet.ItemGetServlet</servlet-class>
+    </servlet>
+ 
+    <servlet-mapping>
+        <servlet-name>ItemGetServlet</servlet-name>
+        <url-pattern>/itemGet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>ItemEditServlet</servlet-name>
+        <servlet-class>servlet.ItemEditServlet</servlet-class>
+    </servlet>
+ 
+    <servlet-mapping>
+        <servlet-name>ItemEditServlet</servlet-name>
+        <url-pattern>/itemEdit</url-pattern>
+    </servlet-mapping>
+    
 </web-app>

@@ -36,7 +36,7 @@ public class CustomerEditServlet extends HttpServlet{
 		c.setTotal(total);
 		
 		new CustomerDAO().update(c);
-		response.sendRedirect("customerList");
+		response.sendRedirect("/customerList");
 	}
 	
 }

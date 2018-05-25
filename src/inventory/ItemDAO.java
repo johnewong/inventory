@@ -65,6 +65,7 @@ public class ItemDAO {
 			ps.setInt(6, item.getStock());
 			ps.setInt(7, item.getPrice());
 			ps.setInt(8, item.getId());
+			ps.execute();
 			
 		} catch(SQLException e) {
 			e.printStackTrace();

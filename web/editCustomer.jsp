@@ -2,7 +2,8 @@
     pageEncoding="UTF-8" import="java.util.*"%>
     
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-
+<!DOCTYPE html>
+<head></head>
 <body>
 	<b>User: ${userName}<b> 
 	<form method="post" action="/customerEdit">
@@ -48,3 +49,4 @@
 	</form>
 
 </body>
+</html>
