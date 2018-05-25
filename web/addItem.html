@@ -1,0 +1,38 @@
+<html>
+	<body>
+		<form method="post" action="itemAdd">
+			<table align='center' border='1' cellspacing='0'>
+			<tr>
+			<td>
+			Name: <input type="text" placeholder="Enter Item Name" name="name" required>
+			</td>
+			<td>
+			Description: <input type="text" placeholder="Enter Description" name="desc" required>
+			</td>
+			<td>
+			Category: <input type="text" placeholder="Enter Category" name="cate" required>
+			</td>
+			<td>
+			Status: <input type="text" placeholder="Enter Status" name="status" required>
+			</td>
+			<td>
+			Safety Stock: <input type="number" placeholder="Enter Safety Stock" name="safetyStock" required>
+			</td>
+			<td>
+			Current Stock: <input type="number" placeholder="Enter Current Stock" name="stock" required>
+			</td>
+			<td>
+			Price: <input type="text" placeholder="Enter Price" name="price">
+			</td>
+			</tr>
+			</table>
+			<button type="submit">Add</button>
+		</form>
+		<form action="/productList">
+    			<input type="submit" value="Go ProductList" />
+		</form>
+		<form action="/customerList">
+	    		<input type="submit" value="Go CustomerList" />
+		</form>
+	</body>
+</html>

@@ -151,4 +151,35 @@
         <servlet-name>ProductScanServlet</servlet-name>
         <url-pattern>/productScan</url-pattern>
     </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>ItemListServlet</servlet-name>
+        <servlet-class>servlet.ItemListServlet</servlet-class>
+    </servlet>
+ 
+    <servlet-mapping>
+        <servlet-name>ItemListServlet</servlet-name>
+        <url-pattern>/itemList</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>ItemAddServlet</servlet-name>
+        <servlet-class>servlet.ItemAddServlet</servlet-class>
+    </servlet>
+ 
+    <servlet-mapping>
+        <servlet-name>ItemAddServlet</servlet-name>
+        <url-pattern>/itemAdd</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>ItemDeleteServlet</servlet-name>
+        <servlet-class>servlet.ItemDeleteServlet</servlet-class>
+    </servlet>
+ 
+    <servlet-mapping>
+        <servlet-name>ItemDeleteServlet</servlet-name>
+        <url-pattern>/itemDelete</url-pattern>
+    </servlet-mapping>
+    
 </web-app>

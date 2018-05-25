@@ -35,7 +35,7 @@ public class ItemDAO {
 			
 			ps.setString(1, item.getName());
 			ps.setString(2, item.getDesc());
-			ps.setString(3, item.getCate());
+			ps.setString(3, item.getCategory());
 			ps.setString(4, item.getStatus());
 			ps.setInt(5, item.getSafetyStock());
 			ps.setInt(6, item.getStock());
@@ -59,7 +59,7 @@ public class ItemDAO {
 			
 			ps.setString(1, item.getName());
 			ps.setString(2, item.getDesc());
-			ps.setString(3, item.getCate());
+			ps.setString(3, item.getCategory());
 			ps.setString(4, item.getStatus());
 			ps.setInt(5, item.getSafetyStock());
 			ps.setInt(6, item.getStock());
@@ -92,7 +92,7 @@ public class ItemDAO {
 				i.setId(id);
 				i.setName(rs.getString(2));
 				i.setDesc(rs.getString(3));
-				i.setCate(rs.getString(4));
+				i.setCategory(rs.getString(4));
 				i.setStatus(rs.getString(5));
 				i.setSafetyStock(rs.getInt(6));
 				i.setStock(rs.getInt(7));
@@ -129,15 +129,16 @@ public class ItemDAO {
 				int safetyStock = rs.getInt(6);
 				int stock = rs.getInt(7);
 				int price = rs.getInt(8);
-				Date crateDate = DateUtil.t2d(rs.getTimestamp(9));
+				Date createDate = DateUtil.t2d(rs.getTimestamp(9));
 				i.setId(id);
 				i.setName(name);
 				i.setDesc(desc);
-				i.setCate(cate);
+				i.setCategory(cate);
 				i.setStatus(status);
 				i.setSafetyStock(safetyStock);
 				i.setStock(stock);
 				i.setPrice(price);
+				i.setCreateDate(createDate);
 				itemList.add(i);
 			}
 				ps.close();

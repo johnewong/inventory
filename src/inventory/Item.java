@@ -5,7 +5,7 @@ import java.util.Date;
 public class Item {
 	private int id;
 	private String name;
-	private String desc;
+	private String description;
 	private String category;
 	private String status;
 	private int safetyStock;
@@ -30,18 +30,18 @@ public class Item {
 	}
 	
 	public void setDesc(String desc) {
-		this.desc = desc;
+		this.description = desc;
 	}
 	
 	public String getDesc() {
-		return this.desc;
+		return this.description;
 	}
 	
-	public void setCate(String cate) {
+	public void setCategory(String cate) {
 		this.category = cate;
 	}
 	
-	public String getCate() {
+	public String getCategory() {
 		return this.category;
 	}
 	
