@@ -4,6 +4,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <body>
+<b>Online User: ${online_number}</b>
 <b>User: ${userName}<b> 
 <form method="post" action="/productEdit">
 <table align='center' border='1' cellspacing='0'>
