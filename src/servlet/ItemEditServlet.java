@@ -22,7 +22,6 @@ public class ItemEditServlet extends HttpServlet {
 		i.setName(request.getParameter("name"));
 		i.setDesc(request.getParameter("description"));
 		i.setCategory(request.getParameter("category"));
-		i.setStatus(request.getParameter("status"));
 		i.setSafetyStock(Integer.parseInt(request.getParameter("safetyStock")));
 		i.setStock(Integer.parseInt(request.getParameter("stock")));
 		i.setPrice(Integer.parseInt(request.getParameter("price")));

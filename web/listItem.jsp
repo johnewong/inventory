@@ -12,11 +12,10 @@
 		<script>
 		
 			function checkStock() {
-				var stock = document.getElementById("stock").innerHTML;
-				var safeStock = document.getElementById("safeStock").innerHTML;
-
+				var stock = Number(document.getElementById("stock").innerHTML);
+				var safeStock = Number(document.getElementById("safeStock").innerHTML);
 				
-				if(stock >= safeStock*1.2) {
+				if(stock > safeStock*1.2) {
 					//alert("Safe");
 					document.getElementById("stock").style.color = "green";
 					document.getElementById("status").innerHTML = "Safe";
@@ -24,19 +23,21 @@
 					
 				}
 				
-				if(stock < safeStock*1.2 && stock > safeStock  ) {
+				else if(stock <= safeStock) {
+					//alert("Danger");
+					document.getElementById("stock").style.color = "red";
+					document.getElementById("status").innerHTML = "Danger";
+					document.getElementById("status").style.color = "red";
+				}
+				
+				else{
 					//alert("Warning");
 					document.getElementById("stock").style.color = "#f7a942";
 					document.getElementById("status").innerHTML = "Warning";
 					document.getElementById("status").style.color = "#f7a942";
 				}
 				
-				if(stock <= safeStock) {
-					//alert("Danger");
-					document.getElementById("stock").style.color = "red";
-					document.getElementById("status").innerHTML = "Danger";
-					document.getElementById("status").style.color = "red";
-				}
+				
 			}
 			
 			window.addEventListener('load', checkStock);

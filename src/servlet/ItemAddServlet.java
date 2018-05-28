@@ -23,7 +23,6 @@ public class ItemAddServlet extends HttpServlet{
 		i.setName(request.getParameter("name"));
 		i.setDesc(request.getParameter("desc"));
 		i.setCategory(request.getParameter("cate"));
-		i.setStatus(request.getParameter("status"));
 		i.setSafetyStock(safetyStock);
 		i.setStock(Integer.parseInt(request.getParameter("stock")));
 		i.setPrice(Integer.parseInt(request.getParameter("price")));
