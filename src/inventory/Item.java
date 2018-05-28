@@ -7,7 +7,6 @@ public class Item {
 	private String name;
 	private String description;
 	private String category;
-	private String status;
 	private int safetyStock;
 	private int stock;
 	private int price;
@@ -45,14 +44,6 @@ public class Item {
 		return this.category;
 	}
 	
-	public void setStatus(String status) {
-		this.status = status;
-	}
-	
-	public String getStatus() {
-		return this.status;
-	}
-
 	public int getSafetyStock() {
 		return safetyStock;
 	}

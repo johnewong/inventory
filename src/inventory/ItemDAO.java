@@ -30,17 +30,16 @@ public class ItemDAO {
 	
 	public void add(Item item) {
 		
-		String sql = "insert into item values(null,?,?,?,?,?,?,?,?)";
+		String sql = "insert into item values(null,?,?,?,?,?,?,?)";
 		try(Connection c = getConnection(); PreparedStatement ps = c.prepareStatement(sql)) {
 			
 			ps.setString(1, item.getName());
 			ps.setString(2, item.getDesc());
 			ps.setString(3, item.getCategory());
-			ps.setString(4, item.getStatus());
-			ps.setInt(5, item.getSafetyStock());
-			ps.setInt(6, item.getStock());
-			ps.setInt(7, item.getPrice());
-			ps.setTimestamp(8, DateUtil.d2t(item.getCreateDate()));
+			ps.setInt(4, item.getSafetyStock());
+			ps.setInt(5, item.getStock());
+			ps.setInt(6, item.getPrice());
+			ps.setTimestamp(7, DateUtil.d2t(item.getCreateDate()));
 			ps.execute();
 			ResultSet rs = ps.getGeneratedKeys();
 			while(rs.next()) {
@@ -54,17 +53,16 @@ public class ItemDAO {
 	}
 	
 	public void update(Item item) {
-		String sql = "update item set name = ?, description = ?, category = ?, status = ?, safetyStock = ?, stock = ?, price = ? where id = ?";
+		String sql = "update item set name = ?, description = ?, category = ?, safetyStock = ?, stock = ?, price = ? where id = ?";
 		try(Connection c = getConnection(); PreparedStatement ps = c.prepareStatement(sql)) {
 			
 			ps.setString(1, item.getName());
 			ps.setString(2, item.getDesc());
 			ps.setString(3, item.getCategory());
-			ps.setString(4, item.getStatus());
-			ps.setInt(5, item.getSafetyStock());
-			ps.setInt(6, item.getStock());
-			ps.setInt(7, item.getPrice());
-			ps.setInt(8, item.getId());
+			ps.setInt(4, item.getSafetyStock());
+			ps.setInt(5, item.getStock());
+			ps.setInt(6, item.getPrice());
+			ps.setInt(7, item.getId());
 			ps.execute();
 			
 		} catch(SQLException e) {
@@ -94,11 +92,10 @@ public class ItemDAO {
 				i.setName(rs.getString(2));
 				i.setDesc(rs.getString(3));
 				i.setCategory(rs.getString(4));
-				i.setStatus(rs.getString(5));
-				i.setSafetyStock(rs.getInt(6));
-				i.setStock(rs.getInt(7));
-				i.setPrice(rs.getInt(8));
-				i.setCreateDate(DateUtil.t2d(rs.getTimestamp(9)));
+				i.setSafetyStock(rs.getInt(5));
+				i.setStock(rs.getInt(6));
+				i.setPrice(rs.getInt(7));
+				i.setCreateDate(DateUtil.t2d(rs.getTimestamp(8)));
 			}
 	
 		} catch(SQLException e) {
@@ -126,16 +123,14 @@ public class ItemDAO {
 				String name = rs.getString(2);
 				String desc = rs.getString(3);
 				String cate = rs.getString(4);
-				String status = rs.getString(5);
-				int safetyStock = rs.getInt(6);
-				int stock = rs.getInt(7);
-				int price = rs.getInt(8);
-				Date createDate = DateUtil.t2d(rs.getTimestamp(9));
+				int safetyStock = rs.getInt(5);
+				int stock = rs.getInt(6);
+				int price = rs.getInt(7);
+				Date createDate = DateUtil.t2d(rs.getTimestamp(8));
 				i.setId(id);
 				i.setName(name);
 				i.setDesc(desc);
 				i.setCategory(cate);
-				i.setStatus(status);
 				i.setSafetyStock(safetyStock);
 				i.setStock(stock);
 				i.setPrice(price);

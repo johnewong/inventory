@@ -8,6 +8,40 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+
+		<script>
+		
+			function checkStock() {
+				var stock = document.getElementById("stock").innerHTML;
+				var safeStock = document.getElementById("safeStock").innerHTML;
+
+				
+				if(stock >= safeStock*1.2) {
+					//alert("Safe");
+					document.getElementById("stock").style.color = "green";
+					document.getElementById("status").innerHTML = "Safe";
+					document.getElementById("status").style.color = "green";
+					
+				}
+				
+				if(stock < safeStock*1.2 && stock > safeStock  ) {
+					//alert("Warning");
+					document.getElementById("stock").style.color = "#f7a942";
+					document.getElementById("status").innerHTML = "Warning";
+					document.getElementById("status").style.color = "#f7a942";
+				}
+				
+				if(stock <= safeStock) {
+					//alert("Danger");
+					document.getElementById("stock").style.color = "red";
+					document.getElementById("status").innerHTML = "Danger";
+					document.getElementById("status").style.color = "red";
+				}
+			}
+			
+			window.addEventListener('load', checkStock);
+		</script>
+
 <head>
 <body>
 <b>Online User: ${online_number}</b>
@@ -15,29 +49,28 @@
 <form>
 <table align='center' border='1' cellspacing='0'>
 	<tr>
-		<td>Id</td>
 		<td>Name</td>
 		<td>Description</td>
 		<td>Category</td>
 		<td>Status</td>
 		<td>Safety Stock</td>
-		<td>Stock</td>
-		<td>Price</td>
-		<td>Total</td>
+		<td>Current Stock</td>
+		<td>Price(SGD)</td>
+		<td>Total(SGD)</td>
 		<td>Create Date</td>
 		<td>Edit</td>
 		<td>Delete</td>
+		
 	</tr>
 	
 	 <c:forEach items="${items}" var="item" varStatus="st">
 		<tr>
-		<td>${item.id}</td>
 		<td>${item.name}</td>
 		<td>${item.desc}</td>
 		<td>${item.category}</td>
-		<td>${item.status}</td>
-		<td>${item.safetyStock}</td>
-		<td>${item.stock}</td>
+		<td id="status"></td>
+		<td id="safeStock">${item.safetyStock}</td>
+		<td id="stock">${item.stock}</td>
 		<td>${item.price}</td>
 		<td>${(item.price)*(item.stock)}</td>
 		<td>${item.createDate}</td>

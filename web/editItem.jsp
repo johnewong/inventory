@@ -14,7 +14,7 @@
 				<td>Name</td>
 				<td>Description</td>
 				<td>Category</td>
-				<td>Status</td>
+				<!--<td>Status</td>-->
 				<td>Safety Stock</td>
 				<td>Stock</td>
 				<td>Price</td>
@@ -24,7 +24,6 @@
 			<td><input type="text" name="name" value="${item.name}" maxlength="12" size="12" requried/></td>
 			<td><input type="text" name="description" value="${item.desc}" maxlength="12" size="12" requried/></td>
 			<td><input type="text" name="category" value="${item.category}" maxlength="12" size="12" requried/></td>
-			<td><input type="text" name="status" value="${item.status}" maxlength="12" size="12" requried</td>
 			<td><input type="text" name="safetyStock" value="${item.safetyStock}" requried/></td>
 			<td><input type="text" name="stock" value="${item.stock}" requried/></td>
 			<td><input type="text" name="price" value="${item.price}" requried/></td>
