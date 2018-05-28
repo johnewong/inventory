@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8" import="java.util.*"%>
  
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %> 
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <head>
@@ -11,36 +12,41 @@
 
 		<script>
 		
-			function checkStock() {
-				var stock = Number(document.getElementById("stock").innerHTML);
-				var safeStock = Number(document.getElementById("safeStock").innerHTML);
+			function checkStock(id) {
+				
+				var stockId = "stock" + id;
+				var safeStockId = "safeStock" + id;
+				var statusId = "status" + id;
+				//alert(stockId);
+				var stock = Number(document.getElementById(stockId).innerHTML);
+				var safeStock = Number(document.getElementById(safeStockId).innerHTML);
 				
 				if(stock > safeStock*1.2) {
-					//alert("Safe");
-					document.getElementById("stock").style.color = "green";
-					document.getElementById("status").innerHTML = "Safe";
-					document.getElementById("status").style.color = "green";
+					//alert(id);
+					document.getElementById(stockId).style.color = "green";
+					document.getElementById(statusId).innerHTML = "Safe";
+					document.getElementById(statusId).style.color = "green";
 					
 				}
 				
 				else if(stock <= safeStock) {
-					//alert("Danger");
-					document.getElementById("stock").style.color = "red";
-					document.getElementById("status").innerHTML = "Danger";
-					document.getElementById("status").style.color = "red";
+					//alert(id);
+					document.getElementById(stockId).style.color = "red";
+					document.getElementById(statusId).innerHTML = "Danger";
+					document.getElementById(statusId).style.color = "red";
 				}
 				
 				else{
-					//alert("Warning");
-					document.getElementById("stock").style.color = "#f7a942";
-					document.getElementById("status").innerHTML = "Warning";
-					document.getElementById("status").style.color = "#f7a942";
+					//alert(id);
+					document.getElementById(stockId).style.color = "#f7a942";
+					document.getElementById(statusId).innerHTML = "Warning";
+					document.getElementById(statusId).style.color = "#f7a942";
 				}
 				
 				
 			}
 			
-			window.addEventListener('load', checkStock);
+			//window.addEventListener('load', checkStock);
 		</script>
 
 <head>
@@ -64,14 +70,21 @@
 		
 	</tr>
 	
-	 <c:forEach items="${items}" var="item" varStatus="st">
+	 <c:forEach items="${items}" var="item" varStatus="st">	
+		<script>
+			var size = Number("<c:out value='${fn:length(items)}'/>");
+			var index = Number(${st.index});
+			checkStock(index);
+
+		</script>
+		
 		<tr>
 		<td>${item.name}</td>
 		<td>${item.desc}</td>
 		<td>${item.category}</td>
-		<td id="status"></td>
-		<td id="safeStock">${item.safetyStock}</td>
-		<td id="stock">${item.stock}</td>
+		<td id="status${1+st.index}"></td>
+		<td id="safeStock${1+st.index}">${item.safetyStock}</td>
+		<td id="stock${1+st.index}">${item.stock}</td>
 		<td>${item.price}</td>
 		<td>${(item.price)*(item.stock)}</td>
 		<td>${item.createDate}</td>
