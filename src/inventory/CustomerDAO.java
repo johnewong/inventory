@@ -29,7 +29,7 @@ public class CustomerDAO {
 	public void add(Customer customer) {
 		
 		
-		String sql = "insert into customer (id, companyName, contactName, contactNumber, email, quantity, status, total)"
+		String sql = "insert into customer (id, companyName, contactName, contactNumber, email, status, total)"
 				+ "values(null,?,?,?,?,?,?,?)";
 		try(Connection c = getConnection(); PreparedStatement ps = c.prepareStatement(sql)) {
 			
@@ -38,9 +38,8 @@ public class CustomerDAO {
 			ps.setString(2, customer.getContactName());
 			ps.setString(3, customer.getContactNumber());
 			ps.setString(4, customer.getEmail());
-			ps.setInt(5, customer.getQuantity());
-			ps.setString(6, customer.getStatus());
-			ps.setInt(7, customer.getTotal());
+			ps.setString(5, customer.getStatus());
+			ps.setInt(6, customer.getTotal());
 			ps.execute();
 			ResultSet rs = ps.getGeneratedKeys();
 			
@@ -57,17 +56,16 @@ public class CustomerDAO {
 	}
 	
 	public void update(Customer customer) {
-		String sql = "update customer set companyName = ?, contactName = ?, contactNumber = ?, email = ?, quantity = ?, status = ? , total = ? where id = ?";
+		String sql = "update customer set companyName = ?, contactName = ?, contactNumber = ?, email = ?, status = ? , total = ? where id = ?";
 		try(Connection c = getConnection(); PreparedStatement ps = c.prepareStatement(sql)) {
 			
 			ps.setString(1, customer.getCompanyName());
 			ps.setString(2, customer.getContactName());
 			ps.setString(3, customer.getContactNumber());
 			ps.setString(4, customer.getEmail());
-			ps.setInt(5, customer.getQuantity());
-			ps.setString(6, customer.getStatus());
-			ps.setInt(7, customer.getTotal());
-			ps.setInt(8, customer.getId());
+			ps.setString(5, customer.getStatus());
+			ps.setInt(6, customer.getTotal());
+			ps.setInt(7, customer.getId());
 			ps.execute();
 			
 		} catch(SQLException e) {
@@ -100,9 +98,8 @@ public class CustomerDAO {
 				c.setContactName(rs.getString(3));
 				c.setContactNumber(rs.getString(4));
 				c.setEmail(rs.getString(5));
-				c.setQuantity(rs.getInt(6));
-				c.setStatus(rs.getString(7));
-				c.setTotal(rs.getInt(8));
+				c.setStatus(rs.getString(6));
+				c.setTotal(rs.getInt(7));
 			}	
 		} catch(SQLException e) {
 			e.printStackTrace();
@@ -146,15 +143,13 @@ public class CustomerDAO {
 				String contactName = rs.getString(3);
 				String contactNumber = rs.getString(4);
 				String email = rs.getString(5);
-				int quantity = rs.getInt(6);
-				String status = rs.getString(7);
-				int total = rs.getInt(8);
+				String status = rs.getString(6);
+				int total = rs.getInt(7);
 				customer.setId(id);
 				customer.setCompanyName(companyName);
 				customer.setContactName(contactName);
 				customer.setContactNumber(contactNumber);
 				customer.setEmail(email);
-				customer.setQuantity(quantity);
 				customer.setStatus(status);
 				customer.setTotal(total);
 				customerList.add(customer);
@@ -183,15 +178,13 @@ public class CustomerDAO {
 				String contactName = rs.getString(3);
 				String contactNumber = rs.getString(4);
 				String email = rs.getString(5);
-				int quantity = rs.getInt(6);
-				String status = rs.getString(7);
-				int total = rs.getInt(8);
+				String status = rs.getString(6);
+				int total = rs.getInt(7);
 				customer.setId(id);
 				customer.setCompanyName(companyName);
 				customer.setContactName(contactName);
 				customer.setContactNumber(contactNumber);
 				customer.setEmail(email);
-				customer.setQuantity(quantity);
 				customer.setStatus(status);
 				customer.setTotal(total);
 				customerList.add(customer);
@@ -219,15 +212,13 @@ public class CustomerDAO {
 				String contactName = rs.getString(3);
 				String contactNumber = rs.getString(4);
 				String email = rs.getString(5);
-				int quantity = rs.getInt(6);
-				String status = rs.getString(7);
-				int total = rs.getInt(8);
+				String status = rs.getString(6);
+				int total = rs.getInt(7);
 				customer.setId(id);
 				customer.setCompanyName(companyName);
 				customer.setContactName(contactName);
 				customer.setContactNumber(contactNumber);
 				customer.setEmail(email);
-				customer.setQuantity(quantity);
 				customer.setStatus(status);
 				customer.setTotal(total);
 				customerList.add(customer);
@@ -255,15 +246,13 @@ public class CustomerDAO {
 				String contactName = rs.getString(3);
 				String contactNumber = rs.getString(4);
 				String email = rs.getString(5);
-				int quantity = rs.getInt(6);
-				String status = rs.getString(7);
-				int total = rs.getInt(8);
+				String status = rs.getString(6);
+				int total = rs.getInt(7);
 				customer.setId(id);
 				customer.setCompanyName(companyName);
 				customer.setContactName(contactName);
 				customer.setContactNumber(contactNumber);
 				customer.setEmail(email);
-				customer.setQuantity(quantity);
 				customer.setStatus(status);
 				customer.setTotal(total);
 				customerList.add(customer);

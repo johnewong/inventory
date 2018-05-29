@@ -22,7 +22,6 @@ public class CustomerEditServlet extends HttpServlet{
 		String contactName = request.getParameter("contactName");
 		String contactNumber = request.getParameter("contactNumber");
 		String email = request.getParameter("email");
-		int quantity = Integer.parseInt(request.getParameter("quantity"));
 		String status = request.getParameter("status");
 		int total = Integer.parseInt(request.getParameter("total"));
 		
@@ -31,7 +30,6 @@ public class CustomerEditServlet extends HttpServlet{
 		c.setContactName(contactName);
 		c.setContactNumber(contactNumber);
 		c.setEmail(email);
-		c.setQuantity(quantity);
 		c.setStatus(status);
 		c.setTotal(total);
 		

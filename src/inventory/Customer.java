@@ -6,7 +6,6 @@ public class Customer {
 	private String contactName;
 	private String contactNumber;
 	private String email;
-	private int quantity;
 	private String status;
 	private int total;
 	
@@ -48,14 +47,6 @@ public class Customer {
 	
 	public void setEmail(String email) {
 		this.email = email;
-	}
-	
-	public int getQuantity() {
-		return this.quantity;
-	}
-	
-	public void setQuantity(int quantity) {
-		this.quantity = quantity;
 	}
 	
 	public String getStatus() {

@@ -12,7 +12,6 @@
 		<td>ContactName</td>
 		<td>ContactNumber</td>
 		<td>Email</td>
-		<td>Quantity</td>
 		<td>Status</td>
 		<td>Total</td>
 		<td>Edit</td>
@@ -26,7 +25,6 @@
 		<td>${customer.contactName}</td>
 		<td>${customer.contactNumber}</td>
 		<td>${customer.email}</td>
-		<td>${customer.quantity}</td>
 		<td>${customer.status}</td>
 		<td>${customer.total}</td>
 		<td><a href="customerGet?id=${customer.id}">edit</a></td>
@@ -41,6 +39,10 @@
 </form>
 <form action="/productList">
     	<input type="submit" value="Go ProductList" />
+</form>
+
+<form action="/itemList">
+    	<input type="submit" value="Go ItemList" />
 </form>
 
 <form method="post" action="customerList">

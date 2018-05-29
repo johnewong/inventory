@@ -31,7 +31,6 @@ public class CustomerAddServlet extends HttpServlet{
 		c.setContactName(contactName);
 		c.setContactNumber(contactNumber);
 		c.setEmail(email);
-		c.setQuantity(quantity);
 		c.setStatus(status);
 		c.setTotal(total);
 		

@@ -15,17 +15,15 @@
 				<td>ContactName</td>
 				<td>ContactNumber</td>
 				<td>Email</td>
-				<td>Quantity</td>
 				<td>Status</td>
 				<td>Total</td>
 			</tr>
 			<tr><td>${customer.id}</td>
 			<input name="id" type="text" value="${customer.id}" maxlength="6" size="6" hidden/>
 			<td><input type="text" name="companyName" value="${customer.companyName}" maxlength="12" size="12" requried/></td>
-			<td><input type="text" name="contactName" value="${customer.contactName}" maxlength="12" size="12" requried/></td>
+			<td><input type="text" name="contactName" value="${customer.contactName}" maxlength="18" size="18" requried/></td>
 			<td><input type="text" name="contactNumber" value="${customer.contactNumber}" maxlength="12" size="12" requried/></td>
 			<td><input type="email" name="email" value="${customer.email}" maxlength="12" size="12" requried</td>
-			<td><input type="number" name="quantity" value="${customer.quantity}" requried/></td>
 			<td><select name="status" requried/>
 					<option value="delivered" ${customer.status == "delivered" ? 'selected == "selected"' : ''}> Delivered</option>
 					<option value="unpaid" ${customer.status == "unpaid" ? 'selected == "selected"' : ''}> Unpaid</option>

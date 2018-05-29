@@ -41,7 +41,7 @@
             <td>${product.status}</td>
             <td>${product.soldDate}</td>
             <!--<td>${product.cid}</td>-->
-            <td>${product.customer.companyName}</td>
+            <td><a href="customerGet?id=${product.cid}">${product.customer.companyName}</a></td>
             <td>${product.price}</td>
             <td>${product.password}</td>
             <td>${product.comment}</td>
