@@ -30,7 +30,7 @@ public class CustomerDAO {
 		
 		
 		String sql = "insert into customer (id, companyName, contactName, contactNumber, email, status, total)"
-				+ "values(null,?,?,?,?,?,?,?)";
+				+ "values(null,?,?,?,?,?,?)";
 		try(Connection c = getConnection(); PreparedStatement ps = c.prepareStatement(sql)) {
 			
 			
@@ -47,9 +47,7 @@ public class CustomerDAO {
 				int id = rs.getInt(1);
 				customer.setId(id);
 			}
-			
-			
-			
+		
 		}catch(SQLException e) {
 			e.printStackTrace();
 		}

@@ -7,7 +7,7 @@
 <form>
 <table align='center' border='1' cellspacing='0'>
 	<tr>
-		<td>Id</td>
+		<!--<td>Id</td>-->
 		<td>CompanyName</td>
 		<td>ContactName</td>
 		<td>ContactNumber</td>
@@ -20,7 +20,7 @@
 	
 	 <c:forEach items="${customers}" var="customer" varStatus="st">
 		<tr>
-		<td>${customer.id}</td>
+		<!--<td>${customer.id}</td>-->
 		<td>${customer.companyName}</td>
 		<td>${customer.contactName}</td>
 		<td>${customer.contactNumber}</td>

@@ -15,7 +15,7 @@
 
 <table align='center' border='1' cellspacing='0' class="table table-striped table-bordered table-hover  table-condensed">
     <tr>
-        <td>Id</td>
+        <!--<td>Id</td>-->
         <td>ProductName</td>
         <td>Type</td>
         <td>CreateDate</td>
@@ -33,7 +33,7 @@
     </tr>
     <c:forEach items="${products}" var="product"  varStatus="st">
         <tr>
-            <td>${product.id}</td>
+            <!--<td>${product.id}</td>-->
             <td>${product.productName}</td>
             <td>${product.type}</td>
             <td>${product.createDate}</td>

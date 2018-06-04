@@ -10,7 +10,7 @@
 	<form method="post" action="/customerEdit">
 		<table align='center' border='1' cellspacing='0'>
 			<tr>
-				<td>Id</td>
+				<!--<td>Id</td>-->
 				<td>CompanyName</td>
 				<td>ContactName</td>
 				<td>ContactNumber</td>
@@ -18,12 +18,12 @@
 				<td>Status</td>
 				<td>Total</td>
 			</tr>
-			<tr><td>${customer.id}</td>
+			<!--<tr><td>${customer.id}</td>-->
 			<input name="id" type="text" value="${customer.id}" maxlength="6" size="6" hidden/>
-			<td><input type="text" name="companyName" value="${customer.companyName}" maxlength="12" size="12" requried/></td>
+			<td><input type="text" name="companyName" value="${customer.companyName}" maxlength="20" size="20" requried/></td>
 			<td><input type="text" name="contactName" value="${customer.contactName}" maxlength="18" size="18" requried/></td>
 			<td><input type="text" name="contactNumber" value="${customer.contactNumber}" maxlength="12" size="12" requried/></td>
-			<td><input type="email" name="email" value="${customer.email}" maxlength="12" size="12" requried</td>
+			<td><input type="email" name="email" value="${customer.email}" maxlength="20" size="20" requried</td>
 			<td><select name="status" requried/>
 					<option value="delivered" ${customer.status == "delivered" ? 'selected == "selected"' : ''}> Delivered</option>
 					<option value="unpaid" ${customer.status == "unpaid" ? 'selected == "selected"' : ''}> Unpaid</option>
@@ -33,7 +33,7 @@
 					<option value="other" ${customer.status == "other" ? 'selected == "selected"' : ''}> Other</option>					
 			</select>
 			</td>
-			<td><input type="text" name="total" value="${customer.total}" maxlength="12" size="12"</td>
+			<td><input type="text" name="total" value="${customer.total}" maxlength="12" size="12" required/></td>
 			</tr>
 			
 		</table>

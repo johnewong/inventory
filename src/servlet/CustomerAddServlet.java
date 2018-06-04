@@ -23,7 +23,6 @@ public class CustomerAddServlet extends HttpServlet{
 		String contactName = request.getParameter("contactName");
 		String contactNumber = request.getParameter("contactNumber");
 		String email = request.getParameter("email");
-		int quantity = Integer.parseInt(request.getParameter("quantity"));
 		String status = request.getParameter("status");
 		int total = Integer.parseInt(request.getParameter("total"));
 		
