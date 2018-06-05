@@ -1,4 +1,4 @@
-package inventory;
+package bean;
 
 public class Customer {
 	private int id;

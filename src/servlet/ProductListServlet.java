@@ -8,9 +8,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import inventory.CustomerDAO;
-import inventory.Product;
-import inventory.ProductDAO;
+import bean.Product;
+import dao.CustomerDAO;
+import dao.ProductDAO;
 
 public class ProductListServlet extends HttpServlet{
 

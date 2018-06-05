@@ -1,4 +1,4 @@
-package inventory;
+package bean;
 
 import java.util.Date;
 

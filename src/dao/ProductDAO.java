@@ -1,4 +1,4 @@
-package inventory;
+package dao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -7,13 +7,14 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.List;
+
+import bean.Customer;
+import bean.Product;
+import dao.CustomerDAO;
 import inventory.DateUtil;
 
 import java.util.ArrayList;
 import java.util.Date;
-
-import inventory.CustomerDAO;
-import inventory.Customer;
 
 public class ProductDAO {
 	

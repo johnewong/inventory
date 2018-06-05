@@ -8,8 +8,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import inventory.Product;
-import inventory.ProductDAO;
+import bean.Product;
+import dao.ProductDAO;
 
 public class ProductAddServlet extends HttpServlet {
 	

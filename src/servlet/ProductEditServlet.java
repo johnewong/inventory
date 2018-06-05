@@ -7,8 +7,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import inventory.ProductDAO;
-import inventory.Product;
+import bean.Product;
+import dao.ProductDAO;
 import inventory.PasswordGenerator;
 
 public class ProductEditServlet extends HttpServlet{

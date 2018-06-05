@@ -8,8 +8,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import inventory.Item;
-import inventory.ItemDAO;
+import bean.Item;
+import dao.ItemDAO;
 
 public class ItemAddServlet extends HttpServlet{
 	

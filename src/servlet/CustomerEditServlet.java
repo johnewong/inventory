@@ -7,8 +7,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import inventory.CustomerDAO;
-import inventory.Customer;
+import bean.Customer;
+import dao.CustomerDAO;
 
 public class CustomerEditServlet extends HttpServlet{
 	
