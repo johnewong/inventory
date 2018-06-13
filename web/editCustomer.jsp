@@ -3,9 +3,10 @@
     
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
-<head></head>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
 <body>
-	<b>Online User: ${online_number}</b>
 	<b>User: ${userName}<b> 
 	<form method="post" action="/customerEdit">
 		<table align='center' border='1' cellspacing='0'>
@@ -39,13 +40,5 @@
 		</table>
 		<input type="submit" value="Update">
 	</form>
-
-	<form action="/productList">
-    		<input type="submit" value="Go ProductList" />
-	</form>
-	<form action="/customerList">
-	    	<input type="submit" value="Go CustomerList" />
-	</form>
-
 </body>
 </html>

@@ -2,12 +2,21 @@
     pageEncoding="UTF-8" import="java.util.*"%>
     
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<!DOCTYPE html>
 <head>
- <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
- <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
-  <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
-  <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
+  	<script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+  	<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+<style>
+	table, th, td
+			{
+			border:1px solid white;
+			border-collapse: collapse;
+			family-font: calibri;
+			}	
+			tr:nth-child(odd) {background-color:#49afff;}	
+	</style>
 
 <script>
 $(function() {
@@ -40,19 +49,20 @@ function checkResult(){
 
 </head>
 <body>
-<b>Online User: ${online_number}</b>
-<b>User: ${userName}<b> 
+<%@include file="main.jsp" %>
+<p> You are now: Editing product </p>
 <form method="post" action="/productEdit">
+<div style="overflow-x:auto">
 <table align='center' border='1' cellspacing='0'>
     <tr>
-        <td>Id</td>
-        <td>ProductName</td>
-        <td>Type</td>
-        <td>CreateDate</td>
-        <td>MAC_Address</td>
+        <td>No.</td>
+        <td>Product name</td>
+        <td>Product type</td>
+        <td>Date created</td>
+        <td>MAC Address</td>
         <td>Status</td>
-        <td>SoldDate</td>
-        <td>CompanyName</td>
+        <td>Date sold</td>
+        <td>Company name</td>
         <td>Price</td>
         <td>Password</td>
         <td>Comment</td>
@@ -67,11 +77,11 @@ function checkResult(){
     	</td>
     	<td>
     	
-    		Type: <select name="type" required>
-					<option value="internal" ${product.type == "internal" ? 'selected="selected"' : ''}>Internal antenna</option>
-					<option value="external" ${product.type == "external" ? 'selected="selected"' : ''}>External Antenna</option>
-					<option value="other" ${product.type == "other" ? 'selected="selected"' : ''}>other</option> 
-				</select>
+    		 <select name="type" required>
+				<option value="internal" ${product.type == "internal" ? 'selected="selected"' : ''}>Internal antenna</option>
+				<option value="external" ${product.type == "external" ? 'selected="selected"' : ''}>External Antenna</option>
+				<option value="other" ${product.type == "other" ? 'selected="selected"' : ''}>other</option> 
+			</select>
     	</td>
     	<td>
     		${product.createDate}
@@ -80,15 +90,15 @@ function checkResult(){
     		<input name="MACaddr" type="text" value="${product.macAddr}" maxlength="12" size="12"/>
     	</td>
     	<td>
-    		Status: <select name="status"  id="status" required>//onchange="getOption(this)" 
-					<option value="available" ${product.status == "available" ? 'selected="selected"' : ''}>available</option>
-					<option value="sold" ${product.status == "sold" ? 'selected="selected"' : ''}>sold</option>
-					<option value="other" ${product.status == "other" ? 'selected="selected"' : ''}>other</option> 
-				</select>
+    		<select name="status"  id="status" required>//onchange="getOption(this)" >
+				<option value="available" ${product.status == "Available" ? 'selected="selected"' : ''}>available</option>
+				<option value="sold" ${product.status == "sold" ? 'selected="selected"' : ''}>sold</option>
+				<option value="other" ${product.status == "other" ? 'selected="selected"' : ''}>other</option> 
+			</select>
     	</td>
     	<td>
     		<!--<input name="soldDate" type="text" value="${product.soldDate}" />-->
-    		Date: <input name="soldDate" type="text" id="datepicker" />
+    		<input name="soldDate" type="text" id="datepicker" />
     		
     	</td>
     	<td>
@@ -111,13 +121,9 @@ function checkResult(){
     	</td>
     </tr>
 </table>
+</div>
 <button type="submit">Submit</button>
 </form>
 
-<form action="/productList">
-    	<input type="submit" value="Go ProductList" />
-</form>
-<form action="/customerList">
-	    	<input type="submit" value="Go CustomerList" />
-</form>
 </body>
+</html>

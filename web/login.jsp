@@ -1,21 +1,89 @@
-
-
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8" import="java.util.*"%>
 
 <!DOCTYPE html>
 	<head>
-		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-	<head>
-	<body>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>	
+	
+	.blocks
+	{
+		margin:auto;
+		text-align: center;
+		border: solid 4px #0174CF;
+		background-color: #0174CF;
+		padding: 10px 10px ;
+		border-radius: 45px;
+		width: 350px;
+		height: 350px;
+		position: absolute;
+   	 	top:0;
+    	bottom: 0;
+    	left: 0;
+    	right: 0;
+	}
+	.button
+	{
+  		padding: 8px 15px;
+  		font-size: 15px;
+  		text-align: center;
+  		cursor: pointer;
+  		outline: none;
+  		color: black;
+  		background-color: #fff;
+ 		border: none;
+		border-radius: 15px;
+  		box-shadow: 0 7px #999;
+	}
+	.button:active 
+	{
+  		background-color: #fff;
+  		box-shadow: 0 5px #666;
+  		transform: translateY(3px);
+	}
+	.button:hover
+	{
+		background-color: #e8e8e8;
+	}
+	
+	body
+	{
+		font-family:arial;
+		background-image: url(img/blur1.jpg);
+		background-repeat: no-repeat;
+		
+		background-attachement: fixed;
+	}
+	
+	input[type=text], input[type=password]
+	{
+	 width: 45%;
+     padding: 15px;
+     margin: 5px 0 22px 0;
+     border: none;
+     background: #f1f1f1;
+	}
+	
+	input[type=text]:focus,input[type=password]:focus	
+	{
+		background-color: #e1e1e1;
+	}
+	
+	</style>
+	</head>
+	<body style="color:white">
 		<form method="post" action = "login">
 			<input type="text" name="info" value="${info}" hidden/>
-			Username: <input type="text" placeholder="Enter Username" name="name" required>
-			Password: <input type="password" placeholder="Enter Password" name="password" required>
-			<button class="btn btn-success" type="submit">Login</button>
+			<div class="blocks">	
+				<img src ="img/w1.png" alt= "Whizpace logo" height="60" width="150">
+				<h1><i>Whizpace&trade; Inventory</i></h1>
+				<input type="text" placeholder="Enter username" name="name" required></br>
+				<input type="password" placeholder="Enter password" name="password" required></br>
+				<button class="btn btn-success; button"" type="submit"><b><i>Login</i></b></button></br></br>
+				<small><i>&copy; Copyright 2018 Whizpace</i><small>
+			</div>
 		</form>
 	</body>
 </html>
+

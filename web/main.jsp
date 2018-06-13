@@ -17,11 +17,13 @@
 	  font-family: Arial;
 	  background-color:#0174CF;
 	}
+
 	.topnav 
 	{
 	  overflow: hidden;
 	  background-color: #60adea;
 	}
+
 	.topnav a 
 	{
 	  float: left;
@@ -31,16 +33,19 @@
 	  text-decoration: none;
 	  font-size: 20px;
 	}
+
 	.topnav a:hover 
 	{
 	  background-color: white;
 	  color: black;
 	}
+
 	.topnav a.active
 	 {
 	  background-color: white;
 	  color: black;
 	}
+
 	.header
 	{
 		background-color: #60adea;
@@ -61,12 +66,12 @@
 				<b>Online users: ${online_number}</b>
 				</div>
 				<p>Logged in as: ${userName}<p>
-				<a href="home.jsp"><img src="home-icon.png" width="30"> Home</a>
-				<a href="/productList"><img src="product-icon.png"width="30"> Product</a>
-				<a href="/customerList"><img src ="customers-icon.png" width="30"> Customers</a>
-				<a href="itemList"><img src="misc-icon.png" width="30"> Other items</a>
-				<a href ="https://www.the-qrcode-generator.com" onclick="return confirm('You will be redirected to the QR Page')"><img src="qr-code.png" width="30" height="30">QR Generator</a>
-				<a href ="login.jsp" onclick="return confirm('Are you sure you want to log out?')"><img src="logOut.png" width="30">Log out</a>
+				<a href="home.jsp"><img src="img/home-icon.png" width="30"> Home</a>
+				<a href="/productList"><img src="img/product-icon.png"width="30"> Product</a>
+				<a href="/customerList"><img src ="img/customers-icon.png" width="30"> Customers</a>
+				<a href="itemList"><img src="img/misc-icon.png" width="30"> Other items</a>
+				<a href ="https://www.the-qrcode-generator.com" onclick="return confirm('You will be redirected to the QR Page')"><img src="img/qr-code.png" width="30" height="30">QR Generator</a>
+				<a href ="login.jsp" onclick="return confirm('Are you sure you want to log out?')"><img src="img/logOut.png" width="30">Log out</a>
 			</div> 
 		</div>
 	</body>	
