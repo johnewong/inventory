@@ -77,7 +77,7 @@
 		<form method="post" action = "login">
 			<input type="text" name="info" value="${info}" hidden/>
 			<div class="blocks">	
-				<img src ="img/w1.png" alt= "Whizpace logo" height="60" width="150">
+				<img src ="img/w1.png" alt= "Whizpace" height="60" width="150">
 				<h1><i>Whizpace&trade; Inventory</i></h1>
 				<input type="text" placeholder="Enter username" name="name" required></br>
 				<input type="password" placeholder="Enter password" name="password" required></br>
