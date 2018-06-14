@@ -50,9 +50,10 @@
 	body
 	{
 		font-family:arial;
-		background-image: url(img/blur1.jpg);
+		background-image: url("img/blur1.jpg");
+		background-color: #0174CF;
 		background-repeat: no-repeat;
-		
+		color:white;
 		background-attachement: fixed;
 	}
 	
@@ -72,7 +73,7 @@
 	
 	</style>
 	</head>
-	<body style="color:white">
+	<body>
 		<form method="post" action = "login">
 			<input type="text" name="info" value="${info}" hidden/>
 			<div class="blocks">	
