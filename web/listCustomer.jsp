@@ -39,7 +39,6 @@
 			<div style="overflow-x:auto;">
 				<table class ="table table-bordered">
 					<tr>
-						<td>No.</td>
 						<td>Company name</td>
 						<td>Contact name</td>
 						<td>Contact number</td>
@@ -51,7 +50,6 @@
 					</tr>
 			 	<c:forEach items="${customers}" var="customer" varStatus="st">
 					<tr>
-						<td>${customer.id}</td>
 						<td>${customer.companyName}</td>
 						<td>${customer.contactName}</td>
 						<td>${customer.contactNumber}</td>
