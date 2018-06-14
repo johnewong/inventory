@@ -4,7 +4,7 @@ This is the inventory project
 
 Set up for Windows user:
 1. Please download JDK, JRE, mysql and Tomcat in your computer.
-2. Please add environment variable JAVA_HOME, JRE_HOME, CATELINA_HOME, CLASSPATH in your pc.
+2. Please add environment variable JAVA_HOME, JRE_HOME, CATELINA_HOME, CLASSPATH in your pc.<br>
 3  Plesase clone this project in you git initialized folder.
 4. Please change the permission of folder "inventory".
 5. Please configure Tomcat config file in ..\tomcat\conf\server.xml
@@ -14,7 +14,7 @@ Set up for Windows user:
 
 Set up for Linux user:
 1. Please download JDK, JRE, mysql and Tomcat in your computer.
-2. Please add environment variable JAVA_HOME, JRE_HOME, CATELINA_HOME, CLASSPATH in your pc.
+2. Please add environment variable JAVA_HOME, JRE_HOME, CATELINA_HOME, CLASSPATH in your pc.<br>
 3  Plesase clone this project in you git initialized folder.
 4. Please change the permission of folder "inventory".
 5. Please configure Tomcat config file in ..\tomcat\conf\server.xml
