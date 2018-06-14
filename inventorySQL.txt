@@ -1,0 +1,80 @@
+# Host: 127.0.0.1  (Version: 5.5.15)
+# Date: 2018-06-12 11:17:46
+# Generator: MySQL-Front 5.3  (Build 4.269)
+
+/*!40101 SET NAMES utf8 */;
+
+#
+# Structure for table "customer"
+#
+
+DROP TABLE IF EXISTS `customer`;
+CREATE TABLE `customer` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `companyName` varchar(255) DEFAULT NULL,
+  `contactName` varchar(255) DEFAULT NULL,
+  `contactNumber` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `status` varchar(255) DEFAULT NULL,
+  `total` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `companyName` (`companyName`)
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
+
+#
+# Data for table "customer"
+#
+
+INSERT INTO `customer` VALUES (1,'null','null','0','null','null',0),(2,'I2R','YingLay','6544123','Yinglay@email.com','delivered',NULL),(12,'Whizpace','Pankaj','000685567','pankaj@email.com','other',111),(14,'ST Electronic','Alex','84123132','Alex@st.com','delivered',1);
+
+#
+# Structure for table "item"
+#
+
+DROP TABLE IF EXISTS `item`;
+CREATE TABLE `item` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) DEFAULT NULL,
+  `description` varchar(255) DEFAULT NULL,
+  `category` varchar(255) DEFAULT NULL,
+  `safetyStock` int(11) DEFAULT NULL,
+  `stock` int(11) DEFAULT NULL,
+  `price` int(11) DEFAULT NULL,
+  `createDate` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+
+#
+# Data for table "item"
+#
+
+INSERT INTO `item` VALUES (5,'null','null','null',0,0,0,'2018-05-28 11:08:59'),(9,'Antenna','square','antenna',20,26,100,'2018-05-28 15:42:56'),(10,'POE-Switch','poe-switch','switch',10,11,20,'2018-05-28 16:10:45');
+
+#
+# Structure for table "product"
+#
+
+DROP TABLE IF EXISTS `product`;
+CREATE TABLE `product` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `productName` varchar(255) DEFAULT NULL,
+  `type` varchar(255) DEFAULT NULL,
+  `createDate` datetime DEFAULT NULL,
+  `macAddr` varchar(255) DEFAULT NULL,
+  `status` varchar(255) DEFAULT NULL,
+  `soldDate` varchar(255) DEFAULT NULL,
+  `cid` int(11) DEFAULT NULL,
+  `password` varchar(255) DEFAULT NULL,
+  `comment` varchar(255) DEFAULT NULL,
+  `price` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `macAddr` (`macAddr`),
+  KEY `fk_product_customer` (`cid`),
+  CONSTRAINT `fk_product_customer` FOREIGN KEY (`cid`) REFERENCES `customer` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=48 DEFAULT CHARSET=utf8;
+
+#
+# Data for table "product"
+#
+
+INSERT INTO `product` VALUES (1,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(34,'WhizRange\t','internal','2018-05-17 17:07:51','F8B568B8000K','sold','',14,'5i1U@i1i@aa','',0),(41,'WhizRange\t','internal','2018-05-17 17:08:35','F8B568B800DF','available','',14,'5i1U@i1i@a35','',0),(43,'WhizMesh','internal','2018-05-17 18:14:15','F8B568B8000C','sold','',12,'5i1U@i1i@aa2','',0),(44,'WhizRange\t','internal','2018-05-17 18:15:21','F8B568B8000D','sold','',12,'5i1U@i1i@aa3','',NULL),(45,'WhizMesh','internal','2018-05-17 18:18:13','F8B568B8000A','sold','',12,'5i1U@i1i@aa0','',0),(46,'WhizMesh','internal','2018-05-17 18:19:08','F8B568B8123L','sold','',1,'5i1U@i1i@cW','',1111),(47,'WhizNano','internal','2018-06-04 15:30:12','F8B568B800WQ','available','',1,'tvws','test',0);
