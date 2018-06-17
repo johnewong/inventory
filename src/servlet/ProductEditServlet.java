@@ -44,10 +44,12 @@ public class ProductEditServlet extends HttpServlet{
 		product.setPassword(password);
 		product.setComment(comment);
 		product.setPrice(price);
-		if(status.equals("other")||status.equals("sold")) 
+		if(status.equals("other")||status.equals("sold")) {
 			product.setSoldDate(soldDate);
+		}
 		 else
 			product.setSoldDate("");
+		
 		new ProductDAO().update(product);		
 		response.sendRedirect("productList");
 	}
