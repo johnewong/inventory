@@ -37,12 +37,11 @@
 			<td><input type="text" name="contactNumber" value="${customer.contactNumber}" maxlength="100" size="12" requried/></td>
 			<td><input type="email" name="email" value="${customer.email}" maxlength="100" size="" requried</td>
 			<td><select name="status" requried/>
-					<option value="delivered" ${customer.status == "delivered" ? 'selected == "selected"' : ''}> Delivered</option>
-					<option value="unpaid" ${customer.status == "unpaid" ? 'selected == "selected"' : ''}> Unpaid</option>
-					<option value="unconfirmed" ${customer.status == "unconfirmed" ? 'selected == "selected"' : ''}> Unconfirmed</option>
-					<option value="confirmed" ${customer.status == "confirmed" ? 'selected == "selected"' : ''}> Confirmed</option>
-					<option value="unconfirmed" ${customer.status == "delivered" ? 'selected == "selected"' : ''}> Unconfirmed</option>							
-					<option value="other" ${customer.status == "other" ? 'selected == "selected"' : ''}> Other</option>					
+			<option value="delivered" ${customer.status == "delivered" ? 'selected == "selected"' : ''}> Delivered</option>
+			<option value="unpaid" ${customer.status == "unpaid" ? 'selected == "selected"' : ''}> Unpaid</option>
+			<option value="unconfirmed" ${customer.status == "unconfirmed" ? 'selected == "selected"' : ''}> Unconfirmed</option>
+			<option value="confirmed" ${customer.status == "confirmed" ? 'selected == "selected"' : ''}> Confirmed</option>				
+			<option value="other" ${customer.status == "other" ? 'selected == "selected"' : ''}> Other</option>					
 			</select>
 			</td>
 			<td><input type="text" name="total" value="${customer.total}" maxlength="12" size="12" required/></td>
