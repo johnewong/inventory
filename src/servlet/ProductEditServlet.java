@@ -44,7 +44,7 @@ public class ProductEditServlet extends HttpServlet{
 		product.setPassword(password);
 		product.setComment(comment);
 		product.setPrice(price);
-		if(status.equals("sold")) 
+		if(status.equals("other")||status.equals("sold")) 
 			product.setSoldDate(soldDate);
 		 else
 			product.setSoldDate("");
