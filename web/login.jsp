@@ -54,7 +54,7 @@
 		background-repeat: repeat;
 		background-image: url("img/blur1.jpg");
 		background-color: #0174CF;
-		background-repeat: no-repeat;
+		background-repeat: repeat;
 		color:white;
 		background-attachement: fixed;
 	}
