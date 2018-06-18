@@ -60,16 +60,16 @@ function checkResult(){
 
     <tr>
   
-        <td>Product name</td>
-        <td>Antenna type</td>
-        <td>Date created</td>
-        <td>MAC Address</td>
-        <td>Status</td>
-        <td>Date sold (DD/MM/YYYY)</td>
-        <td>Company name</td>
-        <td>Sold at (USD)</td>
-        <td>Password</td>
-        <td>Comment</td>
+        <th>Product name</th>
+        <th>Antenna type</th>
+        <th>Date created</th>
+        <th>MAC Address</th>
+        <th>Status</th>
+        <th>Date sold (YYYY-MM-DD)</th>
+        <th>Company name</th>
+        <th>Sold at (USD)</th>
+        <th>Password</th>
+        <th>Comments</th>
     </tr>
     <tr>
     	
@@ -130,7 +130,7 @@ function checkResult(){
 
 
 
-
+<!-- git test -->
 
 </body>
 </html>
