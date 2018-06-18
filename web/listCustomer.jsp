@@ -48,15 +48,6 @@
 						<th>Update</th>
 						<th>Delete</th>
 					</tr>
-						<td>Company name</td>
-						<td>Contact name</td>
-						<td>Contact number</td>
-						<td>Email</td>
-						<td>Status</td>
-						<td>Total</td>
-						<td>Edit</td>
-						<td>Delete</td>
-					</tr>
 			 	<c:forEach items="${customers}" var="customer" varStatus="st">
 					<tr>
 						<td>${customer.companyName}</td>

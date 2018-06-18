@@ -50,16 +50,13 @@
 	body
 	{
 		font-family:arial;
-<<<<<<< HEAD
 		background-image: url(img/blur1.jpg);
 		background-repeat: repeat;
-=======
 		background-image: url("img/blur1.jpg");
 		background-color: #0174CF;
 		background-repeat: no-repeat;
 		color:white;
 		background-attachement: fixed;
->>>>>>> 68b8e70d83eba35516efcbe85d270c74b0877959
 	}
 	
 	input[type=text], input[type=password]
