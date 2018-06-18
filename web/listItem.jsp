@@ -2,6 +2,7 @@
     pageEncoding="UTF-8" import="java.util.*"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
  <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %> 
+ 
 <!DOCTYPE html>
 	<head>
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -47,8 +48,9 @@
 			border:3px solid white;
 			border-collapse: collapse;
 			family-font: calibri;
-			text-align: center;
+			
 			}	
+			
 			tr:nth-child(odd) {background-color:#49afff;}
 		</style>
 		
@@ -63,21 +65,20 @@
 		<br>
 		<form>
 			<div style="overflow-x:auto">
-				<table class ="table table-bordered">
+			<table class="table table-bordered">
 					<tr>
-						<td>Name</td>
-						<td>Description</td>
-						<td>Category</td>
-						<td>Status</td>
-						<td>Safety Stock</td>
-						<td>Stock</td>
-						<td>Price</td>
-						<td>Total</td>
-						<td>Create Date</td>
-						<td>Edit</td>
-						<td>Delete</td>
+						<th>Name</th>
+						<th>Description</th>
+						<th>Category</th>
+						<th>Status</th>
+						<th>Safety Stock</th>
+						<th>Current stock</th>
+						<th>Cost (USD)</th>
+						<th>Total</th>
+						<th>Date created</th>
+						<th>Update</th>
+						<th>Delete</th>
 					</tr>
-					
 			 <c:forEach items="${items}" var="item" varStatus="st">	
 				<script>
 					var size = Number("<c:out value='${fn:length(items)}'/>");
@@ -95,11 +96,11 @@
 						<td>${item.price}</td>
 						<td>${(item.price)*(item.stock)}</td>
 						<td>${item.createDate}</td>
-						<td><a href="itemGet?id=${item.id}">edit</a></td>
-				        <td><a href="itemDelete?id=${item.id}" onclick="return confirm('Are you sure you want to delete this item?');">delete</a></td> 		
+						<td><a href="itemGet?id=${item.id}"><img src="img\edit.png" width="20"></a></td>
+				        <td><a href="itemDelete?id=${item.id}" onclick="return confirm('Are you sure you want to delete this item?');"><img src="img\delete.png" width="20"></a></td> 		
 					</tr>
-			</c:forEach>
-				</table>
+				</c:forEach>
+			</table>
 			</div>
 		</form>
 	</body>

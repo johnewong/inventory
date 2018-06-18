@@ -33,7 +33,7 @@
   		color: black;
   		background-color: #fff;
  		border: none;
-		border-radius: 15px;
+		border-radius: 10px;
   		box-shadow: 0 7px #999;
 	}
 	.button:active 
@@ -51,9 +51,7 @@
 	{
 		font-family:arial;
 		background-image: url(img/blur1.jpg);
-		background-repeat: no-repeat;
-		
-		background-attachement: fixed;
+		background-repeat: repeat;
 	}
 	
 	input[type=text], input[type=password]
@@ -68,6 +66,11 @@
 	input[type=text]:focus,input[type=password]:focus	
 	{
 		background-color: #e1e1e1;
+	}
+	img
+	{	
+		width:100%
+		height:auto;
 	}
 	
 	</style>

@@ -16,9 +16,11 @@ public class ItemDeleteServlet extends HttpServlet{
 	
 		request.setCharacterEncoding("UTF-8");
 		int id = Integer.parseInt(request.getParameter("id"));
+		if(id != 1) {
 		System.out.println("Delete id: "+id);
 		new ItemDAO().delete(id);
 		System.out.println("A item has been deleted");
+		}
 		response.sendRedirect("/itemList");
 	}
 }

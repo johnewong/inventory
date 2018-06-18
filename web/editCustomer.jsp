@@ -4,12 +4,23 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <head>
+<style>
+	table, th, td
+			{
+			border:1px solid white;
+			border-collapse: collapse;
+			family-font: calibri;
+			}	
+			tr:nth-child(odd) {background-color:#49afff;}	
+</style>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-	<b>User: ${userName}<b> 
+	<%@include file="main.jsp" %>
+	<p> You are now: Updating customer</p>
 	<form method="post" action="/customerEdit">
-		<table align='center' border='1' cellspacing='0'>
+		<div style="overflow-x:auto">
+		<table class="table table-bordered">
 			<tr>
 				<!--<td>Id</td>-->
 				<td>CompanyName</td>
@@ -21,10 +32,10 @@
 			</tr>
 			<!--<tr><td>${customer.id}</td>-->
 			<input name="id" type="text" value="${customer.id}" maxlength="6" size="6" hidden/>
-			<td><input type="text" name="companyName" value="${customer.companyName}" maxlength="20" size="20" requried/></td>
-			<td><input type="text" name="contactName" value="${customer.contactName}" maxlength="18" size="18" requried/></td>
-			<td><input type="text" name="contactNumber" value="${customer.contactNumber}" maxlength="12" size="12" requried/></td>
-			<td><input type="email" name="email" value="${customer.email}" maxlength="20" size="20" requried</td>
+			<td><input type="text" name="companyName" value="${customer.companyName}" maxlength="100" size="20" requried/></td>
+			<td><input type="text" name="contactName" value="${customer.contactName}" maxlength="100" size="18" requried/></td>
+			<td><input type="text" name="contactNumber" value="${customer.contactNumber}" maxlength="100" size="12" requried/></td>
+			<td><input type="email" name="email" value="${customer.email}" maxlength="100" size="" requried</td>
 			<td><select name="status" requried/>
 					<option value="delivered" ${customer.status == "delivered" ? 'selected == "selected"' : ''}> Delivered</option>
 					<option value="unpaid" ${customer.status == "unpaid" ? 'selected == "selected"' : ''}> Unpaid</option>
@@ -38,6 +49,8 @@
 			</tr>
 			
 		</table>
+		</div>
+		<input type="reset" value="Reset">
 		<input type="submit" value="Update">
 	</form>
 </body>

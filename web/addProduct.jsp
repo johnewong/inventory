@@ -18,25 +18,27 @@
 			family-font: calibri;
 			}	
 			tr:nth-child(odd) {background-color:#49afff;}	
-	</style>
+</style>
 	
 </head>
 	<body>
 		<%@include file="main.jsp" %>
-		<p> You are now: Adding new product</p>
+		<%@include file ="choices.jsp"%>
+		<p> You are now: Adding new product</p><br>
 		<form method="post" action="productAdd">
 		
 		<div style="overflow-x:auto">
 		<table class ="table table-bordered">
 			<tr>
 				<td>
-					Product name: <input type="text" placeholder="Enter Product Name" name="productName" required>
+					Product name: <input type="text" placeholder="Enter product name" name="productName" required>
 				</td>
 				<td>
 					Antenna type: <select name="type" required>
-					<option value="internal">Internal antenna</option>
-					<option value="external">External Antenna</option>
-					<option value="other">Other</option> 
+					<option value="opt" disabled selected>Select your option</option>
+					<option value="internal">Internal</option>
+					<option value="external">External </option>
+					<option value="other">Others</option> 
 					</select>
 				</td>
 			
@@ -46,9 +48,9 @@
 				</td>
 				<td>
 					Status: <select name="status" required>
-					<option value="available">Available</option>
-					<option value="sold">Sold</option>
-					<option value="other">Other</option> 
+					
+					<option value="available" disabled selected>Available</option>
+					
 					</select>
 				</td>
 				<td>
@@ -60,7 +62,6 @@
 			</tr>
 		</table>
 		</div>
-		<br>
 		<button type="submit">Add</button>
 	</body>
 </html>

@@ -16,8 +16,10 @@ public class ProductDeleteServlet extends HttpServlet{
 		
 		request.setCharacterEncoding("UTF-8");
 		int id = Integer.parseInt(request.getParameter("id"));
+		if(id != 1) {
 		System.out.println("Delete Id: " + id);
 		new ProductDAO().delete(id);
+		} 
 		response.sendRedirect("/productList");
 	}
 }

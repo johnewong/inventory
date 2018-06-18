@@ -16,9 +16,11 @@ public class CustomerDeleteServlet extends HttpServlet{
 		
 		request.setCharacterEncoding("UTF-8");
 		int id = Integer.parseInt(request.getParameter("id"));
+		if(id != 1) {
 		System.out.println("Delete Id: " + id);
 		new CustomerDAO().delete(id);
 		System.out.println("A customer has been deleted");
+		}
 		response.sendRedirect("/customerList");
 	}
 }

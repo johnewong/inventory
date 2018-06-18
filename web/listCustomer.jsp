@@ -10,7 +10,7 @@
 			border:3px solid white;
 			border-collapse: collapse;
 			family-font: calibri;
-			text-align: center;
+			
 			}	
 			tr:nth-child(odd) {background-color:#49afff;}		
 		</style>
@@ -37,32 +37,30 @@
 		<br>
 		<form>
 			<div style="overflow-x:auto;">
-				<table class ="table table-bordered">
+			<table class ="table table-bordered">
 					<tr>
-						<td>No.</td>
-						<td>Company name</td>
-						<td>Contact name</td>
-						<td>Contact number</td>
-						<td>Email</td>
-						<td>Status</td>
-						<td>Total</td>
-						<td>Edit</td>
-						<td>Delete</td>
+						<th>Company name</th>
+						<th>Contact name</th>
+						<th>Contact number</th>
+						<th>Email</th>
+						<th>Status</th>
+						<th>Total</th>
+						<th>Update</th>
+						<th>Delete</th>
 					</tr>
 			 	<c:forEach items="${customers}" var="customer" varStatus="st">
 					<tr>
-						<td>${customer.id}</td>
 						<td>${customer.companyName}</td>
 						<td>${customer.contactName}</td>
 						<td>${customer.contactNumber}</td>
 						<td>${customer.email}</td>
 						<td>${customer.status}</td>
 						<td>${customer.total}</td>
-						<td><a href="customerGet?id=${customer.id}">edit</a></td>
-				        <td><a href="customerDelete?id=${customer.id}" onclick="return confirm('Are you sure you want to delete this item?');">delete</a></td> 		
+						<td><a href="customerGet?id=${customer.id}"><img src="img\edit.png" width="20""></a></td>
+				        <td><a href="customerDelete?id=${customer.id}" onclick="return confirm('Are you sure you want to delete this customer?');"><img src="img\delete.png" width="20"></a></td> 		
 					</tr>
 				</c:forEach>
-				</table>
+			</table>
 			</div>
 		</form>
 	</body>

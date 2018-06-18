@@ -10,7 +10,7 @@
 			border:3px solid white;
 			border-collapse: collapse;
 			family-font: calibri;
-			text-align: center;
+			
 			}	
 			tr:nth-child(odd) {background-color:#49afff;}					
 		</style>
@@ -39,18 +39,18 @@
 		<div style="overflow-x:auto;">
 			<table class ="table table-bordered">
 		    	<tr>
-			        <td>Product name</td>
-			        <td>Product type</td>
-			        <td>Date created</td>
-			        <td>MAC Address</td>
-			        <td>Status</td>
-			        <td>Date sold</td>
-			        <td>Company name</td>
-			        <td>Price</td>
-			        <td>Password</td>
-			        <td>Comments</td>
-			        <td>Edit</td>
-			        <td>Delete</td>
+			        <th>Product name</th>
+			        <th>Antenna type</th>
+			        <th>Date created</th>
+			        <th>MAC Address</th>
+			        <th>Status</th>
+			        <th>Date sold (YYYY-MM-DD) </th>
+			        <th>Company name</th>
+			        <th>Sold at (USD)</th>
+			        <th>Password</th>
+			        <th>Comments</th>
+			        <th>Update</th>
+			        <th>Delete</th>
 			    </tr>
 	    	<c:forEach items="${products}" var="product"  varStatus="st">
 	       		 <tr>
@@ -60,17 +60,18 @@
 		            <td>${product.macAddr}</td>
 		            <td>${product.status}</td>
 		            <td>${product.soldDate}</td>
-		            <td><a href="customerGet?id=${product.customer.id}"> ${product.customer.companyName}</td>
+		            <td><a href="customerGet?id=${product.customer.id}" style="color:white";> ${product.customer.companyName}</td>
 		            <td>${product.price}</td>
 		            <td>${product.password}</td>
 		            <td>${product.comment}</td>
 		            <td><a href="productGet?id=${product.id}"><img src="img/edit.png" width="20"></a></td>
-		            <td><a href="productDelete?id=${product.id}" onclick="return confirm('Are you sure you want to delete this item?');"><img src="img/delete.png" width="20"></a></td> 
+		            <td><a href="productDelete?id=${product.id}" onclick="return confirm('Are you sure you want to delete this product?');"><img src="img/delete.png" width="20"></a></td> 
 	        	</tr>
 	    	</c:forEach>
 			</table>
 		</div>
 	</body>
+
 </html>
 
 

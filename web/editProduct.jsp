@@ -8,6 +8,7 @@
  	<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
   	<script src="http://code.jquery.com/jquery-1.8.3.js"></script>
   	<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+  	
 <style>
 	table, th, td
 			{
@@ -16,7 +17,7 @@
 			family-font: calibri;
 			}	
 			tr:nth-child(odd) {background-color:#49afff;}	
-	</style>
+</style>
 
 <script>
 $(function() {
@@ -50,36 +51,38 @@ function checkResult(){
 </head>
 <body>
 <%@include file="main.jsp" %>
-<p> You are now: Editing product </p>
+
+<p> You are now: Updating product </p>
 <form method="post" action="/productEdit">
 <div style="overflow-x:auto">
 <table align='center' border='1' cellspacing='0'>
+<table class="table table-bordered">
+
     <tr>
-        <td>No.</td>
+  
         <td>Product name</td>
-        <td>Product type</td>
+        <td>Antenna type</td>
         <td>Date created</td>
         <td>MAC Address</td>
         <td>Status</td>
-        <td>Date sold</td>
+        <td>Date sold (DD/MM/YYYY)</td>
         <td>Company name</td>
-        <td>Price</td>
+        <td>Sold at (USD)</td>
         <td>Password</td>
         <td>Comment</td>
     </tr>
     <tr>
-    	<td>
-    		${product.id}
+    	
     		<input name="id" type="text" id="id" value="${product.id}" maxlength="6" size="6" hidden/>
-    	</td>
+    
     	<td>
-    		<input name="productName" type="text" value="${product.productName}" maxlength="12" size="12"/>
+    		<input name="productName" type="text" value="${product.productName}" maxlength="10" size="10"/>
     	</td>
     	<td>
     	
     		 <select name="type" required>
-				<option value="internal" ${product.type == "internal" ? 'selected="selected"' : ''}>Internal antenna</option>
-				<option value="external" ${product.type == "external" ? 'selected="selected"' : ''}>External Antenna</option>
+				<option value="internal" ${product.type == "internal" ? 'selected="selected"' : ''}>Internal </option>
+				<option value="external" ${product.type == "external" ? 'selected="selected"' : ''}>External </option>
 				<option value="other" ${product.type == "other" ? 'selected="selected"' : ''}>other</option> 
 			</select>
     	</td>
@@ -87,19 +90,18 @@ function checkResult(){
     		${product.createDate}
     	</td>
     	<td>
-    		<input name="MACaddr" type="text" value="${product.macAddr}" maxlength="12" size="12"/>
+    		<input name="MACaddr" type="text" value="${product.macAddr}" maxlength="12" size="6"/>
     	</td>
     	<td>
     		<select name="status"  id="status" required>//onchange="getOption(this)" >
-				<option value="available" ${product.status == "Available" ? 'selected="selected"' : ''}>available</option>
-				<option value="sold" ${product.status == "sold" ? 'selected="selected"' : ''}>sold</option>
-				<option value="other" ${product.status == "other" ? 'selected="selected"' : ''}>other</option> 
+				<option value="available" ${product.status == "Available" ? 'selected="selected"' : ''}>Available</option>
+				<option value="sold" ${product.status == "sold" ? 'selected="selected"' : ''}>Sold</option>
+				<option value="other" ${product.status == "other" ? 'selected="selected"' : ''}>Others</option> 
 			</select>
     	</td>
     	<td>
     		<!--<input name="soldDate" type="text" value="${product.soldDate}" />-->
-    		<input name="soldDate" type="text" id="datepicker" />
-    		
+    		<input name="soldDate" type="date" id="datepicker" />
     	</td>
     	<td>
     		<select name="cid">
@@ -111,19 +113,24 @@ function checkResult(){
     	</td> 	
     		<!--<input name="cid" type="text" value="${product.cid}" maxlength="6" size="6" hidden/>-->  			
     	<td>
-    		<input name="price" type="text" value="${product.price}" maxlength="12" size="12"/>
+    		<input name="price" type="text" value="${product.price}" maxlength="12" size=6"/>
     	</td>
     	<td>
-    		<input name="password" type="text" value="${product.password}" maxlength="12" size="12"/>
+    		<input name="password" type="text" value="${product.password}" maxlength="12" size="6"/>
     	</td>
     	<td>
-    		<input name="comment" type="text" value="${product.comment}" maxlength="18" size="18"/>
+    		<input name="comment" type="text" value="${product.comment}" maxlength="20" size="6"/>
     	</td>
     </tr>
 </table>
 </div>
-<button type="submit">Submit</button>
+<input type="reset" value="Reset">
+<button type="submit">Update</button>	
 </form>
+
+
+
+
 
 </body>
 </html>

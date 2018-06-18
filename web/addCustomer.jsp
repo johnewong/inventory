@@ -1,34 +1,52 @@
 <!DOCTYPE html>
+<head>
+<style>
+	table, th, td
+			{
+			border:3px solid white;
+			border-collapse: collapse;
+			family-font: calibri;
+			}	
+			tr:nth-child(odd) {background-color:#49afff;}	
+</style>
+	
+
+</head>
+
 	<body>
 	<%@include file="main.jsp" %>
+	<p> You are now: Adding new customer</p><br>
 		<form method="post" action="customerAdd">
-			<table align='center' border='1' cellspacing='0'>
+			<div style="overflow-x:auto">
+			<table class ="table table-bordered">
 			<tr>
 			<td>
-			CompanyName: <input type="text" placeholder="Enter Company Name" name="companyName" maxlength="20" size="20" required>
+			Company name: <input type="text" placeholder="Enter company name" name="companyName" maxlength="100" size="20" required>
 			</td>
 			<td>
-			ContactName: <input type="text" placeholder="Enter Contact Name" name="contactName" maxlength="18" size="18" required>
+			Contact name: <input type="text" placeholder="Enter contact name" name="contactName" maxlength="100" size="18" required>
 			</td>
 			<td>
-			ContactNumber: <input type="text" placeholder="Enter Contact Number" name="contactNumber" maxlength="12" size="12" required>
+			Contact number: <input type="text" placeholder="Enter contact number" name="contactNumber" maxlength="100" size="18" required>
 			</td>
 			<td>
-			Email: <input type="email" placeholder="Enter Email" name="email" maxlength="20" size="20" required>
+			Email: <input type="email" placeholder="Enter Email" name="email" maxlength="100" size="20" required>
 			</td>
-			<td> Status: <select name="status" required/>
+			<td> Status: 
+				<select name="status" required/>
+					<option value="opt" disabled >Select your option</option>
 					<option value="delivered"> Delivered</option>
 					<option value="unpaid"> Unpaid</option>
 					<option value="unconfirmed"> Unconfirmed</option>
-					<option value="confirmed"> Confirmed</option>
-					<option value="unconfirmed"> Unconfirmed</option>							
-					<option value="other"> Other</option>					
+					<option value="confirmed"> Confirmed</option>						
+					<option value="other"> Others</option>					
 			</select></td>
 			<td>
 			Total: <input type="number" placeholder="Enter Total Amount" name="total" required>
 			</td>
 			</tr>
 			</table>
+			</div>
 			<button type="submit">Add</button>
 	</body>
 </html>

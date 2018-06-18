@@ -4,47 +4,46 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 	<head>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"></head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+	table, th, td
+			{
+			border:1px solid white;
+			border-collapse: collapse;
+			family-font: calibri;
+			}	
+			tr:nth-child(odd) {background-color:#49afff;}	
+	</style>
+	
+	</head>
 	<body>
-	<b>Logged in as: ${userName}<b> 
+	<%@include file="main.jsp"%>
+	<p>You are now: Updating item </p>
 	<form method="post" action="/itemEdit">
-		<table align='center' border='1' cellspacing='0'>
+	<table align='center' border='1' cellspacing='0'>
+	<table class="table table-bordered">
 			<tr>
-				<td>Id</td>
 				<td>Name</td>
 				<td>Description</td>
 				<td>Category</td>
-				<td>Status</td>
-				<td>Safety Stock</td>
-				<td>Stock</td>
-				<td>Price</td>
+				<td>Safety stock</td>
+				<td>Current stock</td>
+				<td>Cost (USD)</td>
 			</tr>
-			<tr><td>${item.id}</td>
+		
 			<input name="id" type="text" value="${item.id}" hidden/>
-			<td><input type="text" name="name" value="${item.name}" maxlength="12" size="12" requried/></td>
-			<td><input type="text" name="description" value="${item.desc}" maxlength="12" size="12" requried/></td>
-			<td><input type="text" name="category" value="${item.category}" maxlength="12" size="12" requried/></td>
-			<td><input type="text" name="status" value="${item.status}" maxlength="12" size="12" requried</td>
+			<td><input type="text" name="name" value="${item.name}" maxlength="20" size="20" requried/></td>
+			<td><input type="text" name="description" value="${item.desc}" maxlength="20" size="12" requried/></td>
+			<td><input type="text" name="category" value="${item.category}" maxlength="20" size="12" requried/></td>
 			<td><input type="text" name="safetyStock" value="${item.safetyStock}" requried/></td>
 			<td><input type="text" name="stock" value="${item.stock}" requried/></td>
 			<td><input type="text" name="price" value="${item.price}" requried/></td>
 			</tr>
 			
 		</table>
+		<input type="reset" value="Reset">
 		<input type="submit" value="Update">
 	</form>
 
-	<form action="/productList">
-    		<input type="submit" value="Go ProductList" />
-	</form>
-	<form action="/customerList">
-	    	<input type="submit" value="Go CustomerList" />
-	</form>
-	<form action="/itemList">
-	    	<input type="submit" value="Go ItemList" />
-	</form>
-	
-	
-	
 	</body>
 </html>

@@ -1,4 +1,4 @@
-<html>
+<!DOCTYPE html>
 	<head>
 		<script>
 			fucntion checkStock() {
@@ -9,32 +9,46 @@
 				alert("stock");
 			}
 		</script>
+		<style>
+			table, th, td
+			{
+				border:3px solid white;
+				border-collapse: collapse;
+				family-font: calibri;
+			}	
+			tr:nth-child(odd) {background-color:#49afff;}	
+		</style>
+	
 	</head>
 	<body>
 		<%@include file="main.jsp" %>
+		<p> You are now: Adding new item</p><br>
 		<form method="post" action="itemAdd">
-			<table align='center' border='1' cellspacing='0'>
+			<div style="overflow-x:auto">
+			<table class ="table table-bordered">
+			
 			<tr>
 			<td>
-			Name: <input type="text" placeholder="Enter Item Name" name="name" required>
+			Name: <input type="text" placeholder="Enter item name" name="name" required>
 			</td>
 			<td>
-			Description: <input type="text" placeholder="Enter Description" name="desc" required>
+			Description: <input type="text" placeholder="Enter description" name="desc" required>
 			</td>
 			<td>
-			Category: <input type="text" placeholder="Enter Category" name="cate" required>
+			Category: <input type="text" placeholder="Enter category" name="cate" required>
 			</td>
 			<td id = "safeStock">
-			Safety Stock: <input type="number" placeholder="Enter Safety Stock" name="safetyStock" required>
+			Safety stock: <input type="number" placeholder="Enter safety stock" name="safetyStock" required>
 			</td>
 			<td id = "stock">
-			Current Stock: <input type="number" placeholder="Enter Current Stock" name="stock" required>
+			Current stock: <input type="number" placeholder="Enter current stock" name="stock" required>
 			</td>
 			<td>
-			Price: <input type="text" placeholder="Enter Price" name="price" required>
+			Cost (USD):<input type="text" placeholder="Enter cost" name="price" required>
 			</td>
 			</tr>
 			</table>
+			</div>
 			<button type="submit" onclick="checkStock()">Add</button>
 		
 	</body>
