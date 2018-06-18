@@ -39,6 +39,7 @@
 			<div style="overflow-x:auto;">
 			<table class ="table table-bordered">
 					<tr>
+<<<<<<< HEAD
 						<th>Company name</th>
 						<th>Contact name</th>
 						<th>Contact number</th>
@@ -47,6 +48,16 @@
 						<th>Total</th>
 						<th>Update</th>
 						<th>Delete</th>
+=======
+						<td>Company name</td>
+						<td>Contact name</td>
+						<td>Contact number</td>
+						<td>Email</td>
+						<td>Status</td>
+						<td>Total</td>
+						<td>Edit</td>
+						<td>Delete</td>
+>>>>>>> 68b8e70d83eba35516efcbe85d270c74b0877959
 					</tr>
 			 	<c:forEach items="${customers}" var="customer" varStatus="st">
 					<tr>

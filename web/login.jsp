@@ -50,8 +50,16 @@
 	body
 	{
 		font-family:arial;
+<<<<<<< HEAD
 		background-image: url(img/blur1.jpg);
 		background-repeat: repeat;
+=======
+		background-image: url("img/blur1.jpg");
+		background-color: #0174CF;
+		background-repeat: no-repeat;
+		color:white;
+		background-attachement: fixed;
+>>>>>>> 68b8e70d83eba35516efcbe85d270c74b0877959
 	}
 	
 	input[type=text], input[type=password]
@@ -75,11 +83,11 @@
 	
 	</style>
 	</head>
-	<body style="color:white">
+	<body>
 		<form method="post" action = "login">
 			<input type="text" name="info" value="${info}" hidden/>
 			<div class="blocks">	
-				<img src ="img/w1.png" alt= "Whizpace logo" height="60" width="150">
+				<img src ="img/w1.png" alt= "Whizpace" height="60" width="150">
 				<h1><i>Whizpace&trade; Inventory</i></h1>
 				<input type="text" placeholder="Enter username" name="name" required></br>
 				<input type="password" placeholder="Enter password" name="password" required></br>
