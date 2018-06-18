@@ -19,6 +19,7 @@ public class ProductAddServlet extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 		
 		Product product = new Product();
+		
 		product.setProductName(request.getParameter("productName"));
 		product.setType(request.getParameter("type"));
 		product.setCreateDate(new Date());

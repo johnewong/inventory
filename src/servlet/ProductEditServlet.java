@@ -18,6 +18,8 @@ public class ProductEditServlet extends HttpServlet{
 		
 		request.setCharacterEncoding("UTF-8");
 		int id = Integer.parseInt(request.getParameter("id"));
+		if(id > 60)
+			return;
 		String productName = request.getParameter("productName");
 		String type = request.getParameter("type");
 		String MACaddr = request.getParameter("MACaddr");

@@ -1,6 +1,8 @@
 package bean;
 
 import java.util.Date;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 
 public class Product {
 	private int id;
@@ -15,6 +17,7 @@ public class Product {
 	private String comment;
 	private int price;
 	private Customer customer;
+	
 	
 	public Customer getCustomer() {
 		return this.customer;
@@ -112,5 +115,11 @@ public class Product {
 		this.price = price;
 	}
 	
-	
+	public String get() {
+		Calendar cal = Calendar.getInstance();
+        SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
+        String time = sdf.format(cal.getTime()); 
+        return time;
+	}
+
 }
