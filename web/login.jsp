@@ -50,9 +50,8 @@
 	body
 	{
 		font-family:arial;
-		background-image: url(img/blur1.jpg);
-		background-repeat: repeat;
 		background-image: url("img/blur1.jpg");
+		background-repeat: repeat;
 		background-color: #0174CF;
 		background-repeat: repeat;
 		color:white;
