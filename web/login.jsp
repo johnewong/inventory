@@ -2,7 +2,7 @@
     pageEncoding="UTF-8" import="java.util.*"%>
 
 <!DOCTYPE html>
-	<head>
+<head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<style>	
@@ -50,7 +50,7 @@
 	body
 	{
 		font-family:arial;
-		background-image: url("img/blur1.jpg");
+		background-image: url("/img/blur1.jpg");
 		background-repeat: repeat;
 		background-color: #0174CF;
 		background-repeat: repeat;
@@ -78,7 +78,7 @@
 	}
 	
 	</style>
-	</head>
+</head>
 	<body>
 		<form method="post" action = "login">
 			<input type="text" name="info" value="${info}" hidden/>
