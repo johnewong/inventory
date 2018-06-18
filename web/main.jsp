@@ -73,7 +73,7 @@
 				<a href="itemList"><img src="img/misc-icon.png" width="30"> Other items</a>
 				<a href ="https://www.the-qrcode-generator.com" onclick="return confirm('You will be redirected to the QR Page')"><img src="img/qr-code.png" width="30" height="30">QR Generator</a>
 				<a href="faq.jsp"><img src="img/faq-icon.png" width="30">FAQs</a>
-				<a href ="login.jsp" onclick="return confirm('Are you sure you want to log out?')"><img src="img/logOut.png" width="30">Log out</a>
+				<a href ="logout" onclick="return confirm('Are you sure you want to log out?')"><img src="img/logOut.png" width="30">Log out</a>
 			</div> 
 		</div>
 	</body>	
