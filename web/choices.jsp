@@ -13,7 +13,7 @@
 .choices
 {
 	width: 750px;
-	height:400px;
+	height:auto;
 	margin-right:;
 	border: 2px solid #000000;
 	background-color:#60adea;
