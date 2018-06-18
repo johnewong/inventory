@@ -124,8 +124,8 @@ function checkResult(){
     </tr>
 </table>
 </div>
-<input type="reset" value="Reset">
 <button type="submit">Update</button>	
+<input type="reset" value="Reset">	
 </form>
 
 

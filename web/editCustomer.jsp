@@ -50,8 +50,8 @@
 			
 		</table>
 		</div>
-		<input type="reset" value="Reset">
 		<input type="submit" value="Update">
+		<input type="reset" value="Reset">
 	</form>
 </body>
 </html>
