@@ -29,18 +29,12 @@
 				<td>Safety stock</td>
 				<td>Current stock</td>
 				<td>Cost (USD)</td>
-				<td>Safety Stock</td>
-				<td>Stock</td>
-				<td>Price</td>
 			</tr>
 		
 			<input name="id" type="text" value="${item.id}" hidden/>
 			<td><input type="text" name="name" value="${item.name}" maxlength="20" size="20" requried/></td>
-			<td><input type="text" name="description" value="${item.desc}" maxlength="20" size="12" requried/></td>
+			<td><input type="text" name="description" value="${item.desc}" maxlength="20" size="z" requried/></td>
 			<td><input type="text" name="category" value="${item.category}" maxlength="20" size="12" requried/></td>
-			<td><input type="text" name="name" value="${item.name}" maxlength="12" size="12" requried/></td>
-			<td><input type="text" name="description" value="${item.desc}" maxlength="12" size="12" requried/></td>
-			<td><input type="text" name="category" value="${item.category}" maxlength="12" size="12" requried/></td>
 			<td><input type="text" name="safetyStock" value="${item.safetyStock}" requried/></td>
 			<td><input type="text" name="stock" value="${item.stock}" requried/></td>
 			<td><input type="text" name="price" value="${item.price}" requried/></td>

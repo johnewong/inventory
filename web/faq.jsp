@@ -22,6 +22,9 @@
 <br>
 <h3> Q: How often should I delete entries?(Sold status for eg.)</h3>
 <h5> A: After 3-5 months.</h3>
+<br>
+<h3> Q: Who did this inventory system and who should I contact if there are changes to be made along the way?</h3>
+<h5> A: This inventory system was done by Polytechnic interns. If any changes are to be made, please use git bash and github to retrieve the files from johnewong at github. Please save a copy of the original file first before making any changes.</h5>
 </div>
 </body>
 
