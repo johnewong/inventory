@@ -15,7 +15,7 @@
 <div class="choices">
 <h1 style="color:black"><i>FAQ</i></h1>
 <h3> Q: How do I generate the QR Code?</h3>
-<h5> A: In the generator, enter :"http://(ip address of host)(port number)/productScan?macAddr=(MAC address of device) for eg. http://192.168.186.26:80/productScan?macAddr="F8:B5:6:B8:00:0A" this will bring you to the product update page.</h5>
+<h5> A: In the generator, enter :"http://(ip address of host)(port number)/productScan?macAddr=(MAC address of device) for eg. http://192.168.186.84:8080/productScan?macAddr="F8:B5:6:B8:00:0A" this will bring you to the product update page.</h5>
 <br>
 <h3>Q: What happens if i delete an entry?</h3>
 <h5>A: After deleting any entries in the database, you will be unable to retrieve them unless you have made an extra copy.</h5>
