@@ -119,7 +119,7 @@ function checkResult(){
     		<input name="password" type="text" value="${product.password}" maxlength="12" size="6"/>
     	</td>
     	<td>
-    		<input name="comment" type="text" value="${product.comment}" maxlength="20" size="6"/>
+    		<input name="comment" type="text" value="${product.comment}" maxlength="100" size="6"/>
     	</td>
     </tr>
 </table>
