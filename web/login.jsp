@@ -18,7 +18,7 @@
 		padding: 10px 10px ;
 		border-radius: 30px;
 		width: 350px;
-		height: 300px;
+		height: 350px;
 		position: absolute;
    	 	top:0;
     	bottom: 0;
@@ -52,7 +52,7 @@
 	body
 	{
 		font-family:arial;
-		<!--background-image: url("/img/blur1.jpg");-->
+		background-image: url("http://hdqwalls.com/wallpapers/blur-blue-uu.jpg");
 		background-repeat: repeat;
 		background-color: #6DC1E5;
 		background-repeat: repeat;
@@ -85,7 +85,7 @@
 		<form method="post" action = "login">
 			<input type="text" name="info" value="${info}" hidden/>
 			<div class="blocks">	
-			<!--<img src ="img/product-icon.png" alt= "Whizpace logo" height="60" width="150">-->
+			<img src ="https://image4.owler.com/logo/whizpace_owler_20170508_054039_original.png" alt= "Whizpace logo" height="60" width="200">
 				<h1><i>Whizpace&trade; Inventory</i></h1>
 				<input type="text" placeholder="Enter username" name="name" required></br>
 				<input type="password" placeholder="Enter password" name="password" required></br>
