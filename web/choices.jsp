@@ -12,13 +12,16 @@
 
 .choices
 {
-	width: 750px;
-	height:auto;
-	margin-right:;
-	border: 2px solid #000000;
-	background-color:#60adea;
-	padding:10px;
-	margin:auto;
+	width: 175px;
+	height:100px;
+	margin-right:0%;
+	margin-top:10px;
+	margin-left:5%;
+	border: 3px solid #000000;
+	background-color:#49afff;
+	float:left;
+	text-align:center;
+	padding : 0px 0px 0px 0px;
 	
 }
 

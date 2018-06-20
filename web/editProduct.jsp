@@ -59,7 +59,6 @@ function checkResult(){
 <table class="table table-bordered">
 
     <tr>
-  
         <th>Product name</th>
         <th>Antenna type</th>
         <th>Date created</th>

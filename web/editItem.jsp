@@ -30,7 +30,7 @@
 				<th>Current stock</th>
 				<th>Cost (USD)</th>
 			</tr>
-		
+			
 			<input name="id" type="text" value="${item.id}" hidden/>
 			<td><input type="text" name="name" value="${item.name}" maxlength="20" size="20" requried/></td>
 			<td><input type="text" name="description" value="${item.desc}" maxlength="20" size="z" requried/></td>

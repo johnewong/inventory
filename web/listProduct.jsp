@@ -16,7 +16,6 @@
 		</style>
 	</head>
 	<body>
-		
 		<%@include file="main.jsp" %>	
 		<p> You are now: Viewing product list</p>
 		<form action="addProduct.jsp">

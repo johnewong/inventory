@@ -13,7 +13,7 @@
 	{
 		margin:auto;
 		text-align: center;
-		border: solid 4px #0174CF;
+		border: solid 2px white;
 		background-color: #0174CF;
 		padding: 10px 10px ;
 		border-radius: 30px;
@@ -35,7 +35,7 @@
   		color: black;
   		background-color: #fff;
  		border: none;
-		border-radius: 10px;
+		border-radius: 5px;
   		box-shadow: 0 7px #999;
 	}
 	.button:active 
@@ -66,13 +66,13 @@
 	 width: 45%;
      padding: 15px;
      margin: 5px 0 22px 0;
-     border: 2px solid black;
-     background: #f1f1f1;
+     border: none;
+     background: white;
 	}
 	
 	input[type=text]:focus,input[type=password]:focus	
 	{
-		background-color: #e1e1e1;
+		background-color:#f2f2f2;
 	}
 	img
 	{	
@@ -85,7 +85,7 @@
 		<form method="post" action = "login">
 			<input type="text" name="info" value="${info}" hidden/>
 			<div class="blocks">	
-			<img src ="https://image4.owler.com/logo/whizpace_owler_20170508_054039_original.png" alt= "Whizpace logo" height="60" width="200">
+			<img src ="https://image4.owler.com/logo/whizpace_owler_20170508_054039_original.png" alt= "Whizpace logo" height="65" width="200">
 				<h1><i>Whizpace&trade; Inventory</i></h1>
 				<input type="text" placeholder="Enter username" name="name" required></br>
 				<input type="password" placeholder="Enter password" name="password" required></br>

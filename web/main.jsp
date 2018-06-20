@@ -63,6 +63,16 @@
 		height:25px;
 	}
 	
+	input [type=text]:focus
+	{
+		background-color:#f2f2f2;
+		
+		
+	}
+	
+	
+	
+	
 	</style>
 	<body style="color:white">
 		<div class="header">
@@ -71,7 +81,6 @@
 				<b>Online users: ${online_number}</b>
 				</div>
 				<p>Logged in as: ${userName}<p>
-			
 				<a href="/productList"><img src="img/product-icon.png"width="30"> Product</a>
 				<a href="/customerList"><img src ="img/customers-icon.png" width="30"> Customers</a>
 				<a href="itemList"><img src="img/misc-icon.png" width="30"> Other items</a>
