@@ -18,7 +18,7 @@
 		padding: 10px 10px ;
 		border-radius: 30px;
 		width: 350px;
-		height: 350px;
+		height: 360px;
 		position: absolute;
    	 	top:0;
     	bottom: 0;
