@@ -29,12 +29,21 @@
 		
 		<div style="overflow-x:auto">
 		<table class ="table table-bordered">
+		
+		<tr>
+			<th>Product name</th>
+			<th>Antenna type </th>
+			<th>MAC Address </th>
+			<th>Product status</th>
+			<th>Password</th>
+			<th>Comments</th>
+		
 			<tr>
 				<td>
-					Product name: <input type="text" placeholder="Enter product name" name="productName" required>
+				 <input type="text" placeholder="Enter product name" name="productName" required>
 				</td>
 				<td>
-					Antenna type: <select name="type" required>
+					<select name="type" required>
 					<option value="opt" disabled selected>Select your option</option>
 					<option value="internal">Internal</option>
 					<option value="external">External </option>
@@ -44,20 +53,18 @@
 			
 				<!-- <input type="" name="createDate" value=""> --> 
 				<td>
-					MAC Address: <input type="text" placeholder="xx:xx:xx:xx:xx:xx" name="macAddr" required>
+				<input type="text" placeholder="xx:xx:xx:xx:xx:xx" name="macAddr" required>
 				</td>
 				<td>
-					Status: <select name="status" style="height:25px"required>
-					
+				<select name="status" style="height:25px"required>
 					<option value="available" disabled selected>Available</option>
-					
-					</select>
+				</select>
 				</td>
 				<td>
-					Password: <input type="text" placeholder="Enter Password" name="password" required>
+					<input type="text" placeholder="Enter password" name="password" required>
 				</td>
 				<td>
-					Comment: <input type="text" placeholder="Enter Comment" name="comment">
+					<input type="text" placeholder="Enter comments" name="comment">
 				</td>
 			</tr>
 		</table>
