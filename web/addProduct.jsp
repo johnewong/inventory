@@ -54,7 +54,7 @@
 					</select>
 				</td>
 				<td>
-					Password: <input type="password" placeholder="Enter Password" name="password" required>
+					Password: <input type="text" placeholder="Enter Password" name="password" required>
 				</td>
 				<td>
 					Comment: <input type="text" placeholder="Enter Comment" name="comment">
