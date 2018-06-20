@@ -47,7 +47,7 @@
 					MAC Address: <input type="text" placeholder="xx:xx:xx:xx:xx:xx" name="macAddr" required>
 				</td>
 				<td>
-					Status: <select name="status" required>
+					Status: <select name="status" style="height:25px"required>
 					
 					<option value="available" disabled selected>Available</option>
 					

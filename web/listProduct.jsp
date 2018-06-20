@@ -25,7 +25,7 @@
 		<br>
 		<form method="post" action="productList">
 			<p> Search by: </p>
-			<select name="search">
+			<select name="search" >
 				<option value="" disabled selected>Select your option</option>
 				<option value="companyName">Company name</option>
 				<option value="productName">Product name</option>

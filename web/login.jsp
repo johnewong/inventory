@@ -66,7 +66,7 @@
 	 width: 45%;
      padding: 15px;
      margin: 5px 0 22px 0;
-     border: none;
+     border: 2px solid black;
      background: #f1f1f1;
 	}
 	

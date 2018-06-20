@@ -58,6 +58,10 @@
 		padding : 0px 15px 0px 0px;
 	}
 	
+	select
+	{
+		height:25px;
+	}
 	
 	</style>
 	<body style="color:white">
