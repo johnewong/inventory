@@ -10,9 +10,9 @@
 			border:3px solid white;
 			border-collapse: collapse;
 			family-font: calibri;
-			
 			}	
-			tr:nth-child(odd) {background-color:#49afff;}					
+			tr:nth-child(odd) {background-color:#49afff;}		
+		
 		</style>
 	</head>
 	<body>
