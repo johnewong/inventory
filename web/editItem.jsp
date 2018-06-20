@@ -23,12 +23,12 @@
 	<table align='center' border='1' cellspacing='0'>
 	<table class="table table-bordered">
 			<tr>
-				<td>Name</td>
-				<td>Description</td>
-				<td>Category</td>
-				<td>Safety stock</td>
-				<td>Current stock</td>
-				<td>Cost (USD)</td>
+				<th>Name</th>
+				<th>Description</th>
+				<th>Category</th>
+				<th>Safety stock</th>
+				<th>Current stock</th>
+				<th>Cost (USD)</th>
 			</tr>
 		
 			<input name="id" type="text" value="${item.id}" hidden/>
