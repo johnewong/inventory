@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <head>
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
@@ -22,8 +21,8 @@
 			<h3> Q: How often should I delete entries?(Sold status for eg.)</h3>
 			<h5> A: After 3-5 months.</h3>
 			<br>
-			<h3> Q: Who did this inventory system and who should I contact if there are changes to be made along the way?</h3>
-			<h5> A: This inventory system was done by Polytechnic interns. If any changes are to be made, please use git bash and github to retrieve the files from johnewong at github. Please save a copy of the original file first before making any changes.	</h5>
+			<h3> Q: How can i edit the code?</h3>
+			<h5> A: With any Java editing software, preferably Mars Eclipse. More information can be found on <a href ="https://github.com/johnewong/inventory">https://github.com/johnewong/inventory. </a><b><i>WARNING: DO NOT EDIT THE MASTER OR DEV BRANCH. DOWNLOAD EVERYTHING FROM THE DEV BRANCH</i></b></h5>
 		</div>
 	</body>
 </html>

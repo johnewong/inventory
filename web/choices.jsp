@@ -12,14 +12,13 @@
 
 .choices
 {
-	width: 1000px;
+	max-width: 750px;
 	height:auto;
-	margin-left:10%;
+	margin: auto;
 	border: 3px solid #000000;
 	background-color:#49afff;
-	float:left;
 	
-	padding : 0px 0px 0px 0px;
+	position: relative;
 	top:0;
 	bottom:0;
 	right:0;
