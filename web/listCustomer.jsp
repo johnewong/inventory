@@ -27,7 +27,7 @@
 			<select name="search">
 				<option value=""disabled selected>Select your option</option>
 				<option value="companyName">Company</option>
-				<option value="contactName">ContactName</option>
+				<option value="contactName">Contact name</option>
 				<option value="status">Status</option>
 			</select>
 			<input type="text" name="key" placeholder="Keyword">
