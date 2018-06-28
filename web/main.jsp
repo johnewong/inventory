@@ -71,8 +71,6 @@
 	}
 	
 	
-	
-	
 	</style>
 	<body style="color:white">
 		<div class="header">
@@ -81,9 +79,9 @@
 				<b>Online users: ${online_number}</b>
 				</div>
 				<p>Logged in as: ${userName}<p>
-				<a href="/productList"><img src="img/product-icon.png"width="30"> Product</a>
+				<a href="/productList"><img src="img/product-icon.png"width="30"> Items</a>
 				<a href="/customerList"><img src ="img/customers-icon.png" width="30"> Customers</a>
-				<a href="itemList"><img src="img/misc-icon.png" width="30"> Other items</a>
+				<a href="itemList"><img src="img/misc-icon.png" width="30"> Miscellaneous</a>
 				<a href ="https://www.the-qrcode-generator.com" onclick="return confirm('You will be redirected to the QR Page')"><img src="img/qr-code.png" width="30" height="30">QR Generator</a>
 				<a href="faq.jsp"><img src="img/faq-icon.png" width="30">FAQs</a>
 				<a href ="logout" onclick="return confirm('Are you sure you want to log out?')"><img src="img/logOut.png" width="30">Log out</a>

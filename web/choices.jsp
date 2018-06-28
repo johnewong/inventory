@@ -12,7 +12,7 @@
 
 .choices
 {
-	max-width: 750px;
+	max-width: 800px;
 	height:auto;
 	margin: auto;
 	border: 3px solid #000000;
