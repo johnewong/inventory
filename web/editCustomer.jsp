@@ -23,9 +23,9 @@
 		<table class="table table-bordered">
 			<tr>
 				<!--<td>Id</td>-->
-				<td>CompanyName</td>
-				<td>ContactName</td>
-				<td>ContactNumber</td>
+				<td>Company name</td>
+				<td>Contact name</td>
+				<td>Contact number</td>
 				<td>Email</td>
 				<td>Status</td>
 				<td>Total</td>
