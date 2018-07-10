@@ -89,7 +89,7 @@ function checkResult(){
     		${product.createDate}
     	</td>
     	<td>
-    		<input name="MACaddr" type="text" value="${product.macAddr}" maxlength="12" size="6"/>
+    		<input name="MACaddr" type="text" value="${product.macAddr}" maxlength="20" size="6"/>
     	</td>
     	<td>
     		<select name="status"  id="status" required>//onchange="getOption(this)" >
