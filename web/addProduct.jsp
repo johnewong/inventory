@@ -24,7 +24,7 @@
 	<body>
 		<%@include file="main.jsp" %>
 		<%@include file ="choices.jsp"%>
-		<p> You are now: Adding new product</p><br>
+		<p> You are now: Adding new items</p><br>
 		<form method="post" action="productAdd">
 		
 		<div style="overflow-x:auto">

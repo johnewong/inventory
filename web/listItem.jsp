@@ -57,9 +57,9 @@
 	</head>
 	<body>
 		<%@include file="main.jsp" %>
-		<p>You are now: Viewing item list</p>
+		<p>You are now: Viewing miscellaneous</p>
 		<form action="addItem.jsp">
-	    	<input type="submit" value="Add New Items" />
+	    	<input type="submit" value="Add new miscellaneous" />
 		</form>
 		<br>
 		<br>

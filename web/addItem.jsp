@@ -22,7 +22,7 @@
 	</head>
 	<body>
 		<%@include file="main.jsp" %>
-		<p> You are now: Adding new item</p><br>
+		<p> You are now: Adding new miscellaneous</p><br>
 		<form method="post" action="itemAdd">
 			<div style="overflow-x:auto">
 			<table class ="table table-bordered">

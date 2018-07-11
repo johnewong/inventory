@@ -18,7 +18,7 @@
 	</head>
 	<body>
 	<%@include file="main.jsp"%>
-	<p>You are now: Updating item </p>
+	<p>You are now: Updating miscellaneous </p>
 	<form method="post" action="/itemEdit">
 	<table align='center' border='1' cellspacing='0'>
 	<table class="table table-bordered">

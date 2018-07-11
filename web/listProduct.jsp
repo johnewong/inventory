@@ -17,9 +17,9 @@
 	</head>
 	<body>
 		<%@include file="main.jsp" %>	
-		<p> You are now: Viewing product list</p>
+		<p> You are now: Viewing items</p>
 		<form action="addProduct.jsp">
-	    	<input type="submit" value="Add New Products" />
+	    	<input type="submit" value="Add new items" />
 		</form>
 		<br>
 		<form method="post" action="productList">

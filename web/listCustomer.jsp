@@ -17,9 +17,9 @@
 	</head>
 	<body>
 		<%@include file="main.jsp" %>
-		<p> You are now: Viewing customer list</p>
+		<p> You are now: Viewing customers</p>
 		<form action="addCustomer.jsp">
-			<input type="submit" value="Add New Customer" />
+			<input type="submit" value="Add new customer" />
 		</form>
 		<br>
 		<p> Search by:</p>

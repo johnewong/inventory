@@ -52,7 +52,7 @@ function checkResult(){
 <body>
 <%@include file="main.jsp" %>
 
-<p> You are now: Updating product </p>
+<p> You are now: Updating item </p>
 <form method="post" action="/productEdit">
 <div style="overflow-x:auto">
 <table align='center' border='1' cellspacing='0'>
