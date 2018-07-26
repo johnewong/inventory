@@ -35,7 +35,7 @@
 			<th>Antenna type </th>
 			<th>MAC Address </th>
 			<th>Product status</th>
-			<th>Password</th>
+			<th style="display: none;">Password</th>
 			<th>Comments</th>
 		
 			<tr>
@@ -60,9 +60,9 @@
 					<option value="available" disabled selected>Available</option>
 				</select>
 				</td>
-				<td>
+				<!--<td>
 					<input type="text" placeholder="Enter password" name="password" required>
-				</td>
+				</td>-->
 				<td>
 					<input type="text" placeholder="Enter comments" name="comment">
 				</td>

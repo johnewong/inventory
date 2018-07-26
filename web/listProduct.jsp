@@ -46,7 +46,7 @@
 			        <th>Date sold (YYYY-MM-DD) </th>
 			        <th>Company name</th>
 			        <th>Sold at (USD)</th>
-			        <th>Password</th>
+			        <th style="display:none;">Password</th>
 			        <th>Comments</th>
 			        <th>Update</th>
 			        <th>Delete</th>
@@ -61,7 +61,7 @@
 		            <td>${product.soldDate}</td>
 		            <td><a href="customerGet?id=${product.customer.id}" style="color:white";> ${product.customer.companyName}</td>
 		            <td>${product.price}</td>
-		            <td>${product.password}</td>
+		            <!--<td >${product.password}</td>-->
 		            <td>${product.comment}</td>
 		            <td><a href="productGet?id=${product.id}"><img src="img/edit.png" width="20"></a></td>
 		            <td><a href="productDelete?id=${product.id}" onclick="return confirm('Are you sure you want to delete this product?');"><img src="img/delete.png" width="20"></a></td> 

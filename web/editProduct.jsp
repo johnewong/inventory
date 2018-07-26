@@ -67,7 +67,7 @@ function checkResult(){
         <th>Date sold (YYYY-MM-DD)</th>
         <th>Company name</th>
         <th>Sold at (USD)</th>
-        <th>Password</th>
+        <th style="display:none;">Password</th>
         <th>Comments</th>
     </tr>
     <tr>
@@ -114,9 +114,9 @@ function checkResult(){
     	<td>
     		<input name="price" type="text" value="${product.price}" maxlength="12" size=6"/>
     	</td>
-    	<td>
-    		<input name="password" type="text" value="${product.password}" maxlength="12" size="6"/>
-    	</td>
+    	<!--<td>
+			<input name="password" type="text" value="${product.password}" maxlength="12" size="6"/>
+		</td>-->
     	<td>
     		<input name="comment" type="text" value="${product.comment}" maxlength="100" size="6"/>
     	</td>
