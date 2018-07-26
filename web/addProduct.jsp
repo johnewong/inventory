@@ -53,7 +53,7 @@
 			
 				<!-- <input type="" name="createDate" value=""> --> 
 				<td>
-				<input type="text" placeholder="xx:xx:xx:xx:xx:xx" name="macAddr" required>
+				<input type="text" placeholder="xxxxxxxxxxxx" name="macAddr" required>
 				</td>
 				<td>
 				<select name="status" style="height:25px"required>
