@@ -26,7 +26,7 @@ public class ProductScanServlet extends HttpServlet{
 	
         System.out.println("Scan: "+macAddr);
 		Product product = new ProductDAO().scan(macAddr);
-		//List<Customer> customers = new CustomerDAO().list();
+		List<Customer> customers = new CustomerDAO().list();
 		
 		request.setAttribute("product", product);
 		request.setAttribute("customers", customers);
